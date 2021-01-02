@@ -56,7 +56,7 @@ const totalChart = new Chart(canvasContextTotal, {
             xAxes: [
                 {
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: "Dato",
                     },
                 },
@@ -101,7 +101,7 @@ const perDayChart = new Chart(canvasContextPerDay, {
             xAxes: [
                 {
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: "Dato",
                     },
                 },
