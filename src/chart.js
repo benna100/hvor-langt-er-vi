@@ -119,7 +119,7 @@ const canvasContextPercent = canvasPercent.getContext("2d");
 const percentChart = new Chart(canvasContextPercent, {
     type: "pie",
     data: {
-        labels: ["Mangler vaccine", "Vaccinerede"],
+        labels: ["Ikke vaccinerede", "Vaccinerede"],
         datasets: [
             {
                 data: [restToVaccinate, totalNumberOfVaccinated],

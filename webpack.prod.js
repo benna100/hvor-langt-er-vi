@@ -9,19 +9,19 @@ const SocialTags = require("social-tags-webpack-plugin");
 
 const buildPath = path.resolve(__dirname, "dist");
 
-const appUrl = "https://github-username.github.io/your-repo-name/";
-const appTitle = "Title";
-const appDescription = "App description";
+const appUrl = "https://hvorlangtervi.dk";
+const appTitle = "Hvor langt er vi med vaccinationerne i Danmark?";
+const appDescription = "Se hvor langt Danmark er kommet med vaccinationerne";
 
 module.exports = {
     devtool: "source-map",
     entry: "./src/index.js",
     output: {
         filename: "[name].[hash:20].js",
-        path: buildPath
+        path: buildPath,
     },
     node: {
-        fs: "empty"
+        fs: "empty",
     },
     module: {
         rules: [
@@ -31,8 +31,8 @@ module.exports = {
                 loader: "babel-loader",
 
                 options: {
-                    presets: ["env"]
-                }
+                    presets: ["env"],
+                },
             },
             {
                 test: /\.(scss|css|sass)$/,
@@ -42,15 +42,15 @@ module.exports = {
                             // translates CSS into CommonJS
                             loader: "css-loader",
                             options: {
-                                sourceMap: true
-                            }
+                                sourceMap: true,
+                            },
                         },
                         {
                             // Runs compiled CSS through postcss for vendor prefixing
                             loader: "postcss-loader",
                             options: {
-                                sourceMap: true
-                            }
+                                sourceMap: true,
+                            },
                         },
                         {
                             // compiles Sass to CSS
@@ -58,16 +58,16 @@ module.exports = {
                             options: {
                                 outputStyle: "expanded",
                                 sourceMap: true,
-                                sourceMapContents: true
-                            }
-                        }
+                                sourceMapContents: true,
+                            },
+                        },
                     ],
-                    fallback: "style-loader"
-                })
+                    fallback: "style-loader",
+                }),
             },
             {
                 test: /\.html$/,
-                use: ["html-loader"]
+                use: ["html-loader"],
             },
             {
                 test: /\.(jpg|png)$/,
@@ -77,18 +77,18 @@ module.exports = {
                         options: {
                             name: "[name].[ext]",
                             outputPath: "assets/",
-                            publicPath: "assets/"
-                        }
-                    }
-                ]
-            }
-        ]
+                            publicPath: "assets/",
+                        },
+                    },
+                ],
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./index.html",
             // Inject the js bundle at the end of the body of the given template
-            inject: "body"
+            inject: "body",
         }),
         new CleanWebpackPlugin(buildPath),
         new FaviconsWebpackPlugin({
@@ -117,24 +117,24 @@ module.exports = {
                 opengraph: false,
                 twitter: false,
                 yandex: false,
-                windows: false
-            }
+                windows: false,
+            },
         }),
         new ExtractTextPlugin("styles.[md5:contenthash:hex:20].css", {
-            allChunks: true
+            allChunks: true,
         }),
         new OptimizeCssAssetsPlugin({
             cssProcessor: require("cssnano"),
             cssProcessorOptions: {
                 map: {
-                    inline: false
+                    inline: false,
                 },
                 zindex: false,
                 discardComments: {
-                    removeAll: true
-                }
+                    removeAll: true,
+                },
             },
-            canPrint: true
+            canPrint: true,
         }),
         new SocialTags({
             appUrl: appUrl,
@@ -147,7 +147,7 @@ module.exports = {
                 "og:description": appDescription,
                 "og:site_name": appTitle,
                 "og:locale": "da",
-                "og:article:author": "Your name"
+                "og:article:author": "Your name",
             },
             twitter: {
                 "twitter:card": "summary_large_image",
@@ -156,8 +156,8 @@ module.exports = {
                 "twitter:url": appUrl,
                 "twitter:title": appTitle,
                 "twitter:description": appDescription,
-                "twitter:image": "./src/assets/social-twitter.png"
-            }
-        })
-    ]
+                "twitter:image": "./src/assets/social-twitter.png",
+            },
+        }),
+    ],
 };
