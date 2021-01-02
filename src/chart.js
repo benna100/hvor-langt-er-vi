@@ -119,10 +119,10 @@ const canvasContextPercent = canvasPercent.getContext("2d");
 const percentChart = new Chart(canvasContextPercent, {
     type: "pie",
     data: {
-        labels: ["Ikke vaccinerede", "Vaccinerede"],
+        labels: ["Vaccinerede", "Ikke vaccinerede"],
         datasets: [
             {
-                data: [restToVaccinate, totalNumberOfVaccinated],
+                data: [totalNumberOfVaccinated, restToVaccinate],
                 label: "Per dag",
                 borderColor: "transparent",
                 backgroundColor: ["#3fb8af", "#ccc"],
