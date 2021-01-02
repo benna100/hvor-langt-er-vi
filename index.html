@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#ff4970" />
+        <!-- Mobile header color Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#ff4970" />
+        <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,800"
+            rel="stylesheet"
+        />
+
+        <!-- Primary Meta Tags -->
+        <title>Hvor langt er vi med vaccinationerne i Danmark?</title>
+    </head>
+
+    <body>
+        <main>
+            <h1>Hvor langt er vi med vaccinationerne i Danmark?</h1>
+            <h2 class="total-vaccinated">
+                <p>Vi har vaccineret <strong></strong> personer</p>
+            </h2>
+
+            <h3 class="total-percentage">
+                <p>
+                    Det svarer til at <strong></strong>
+                    <a
+                        target="_blank"
+                        href="https://www.youtube.com/watch?v=cQT1Vp8gbzg"
+                        >procent</a
+                    >
+                    af befolkningen
+                </p>
+            </h3>
+
+            <h3 class="when-done">
+                <p>
+                    Med den hastighed er vi færdige
+                    <strong></strong> *
+                </p>
+            </h3>
+            <section class="graphs">
+                <h2>Udforsk data</h2>
+                <div class="graphs-wrapper">
+                    <button data-key="total" class="active">
+                        Vaccinerede total
+                    </button>
+                    <button data-key="per-day">Vaccinerede per dag</button>
+                    <button data-key="percent">Procentvis færdig</button>
+                </div>
+                <canvas
+                    class="total-vaccinated"
+                    width="400"
+                    height="400"
+                ></canvas>
+                <canvas
+                    class="per-day-vaccinated"
+                    width="400"
+                    height="400"
+                ></canvas>
+                <canvas class="percent" width="400" height="400"></canvas>
+            </section>
+            <section class="data">
+                <p>
+                    Data kommer fra
+                    <a
+                        target="_blank"
+                        href="https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning"
+                        >Statens Serum Institut</a
+                    >
+                    og bliver opdateret dagligt
+                </p>
+
+                <p>
+                    * Beregnet ud fra den seneste uges gennemsnitlige antal
+                    vaccinerede
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>
+                Lavet af
+                <a href="https://benna100.github.io/portfolio/" target="_blank"
+                    >Benjamin Hughes</a
+                >
+            </p>
+            <p>
+                Hvis du kan lide den her slags så følg mig på
+                <a href="https://twitter.com/dalshughes" target="_blank"
+                    >Twitter</a
+                >
+            </p>
+            <p>
+                Kontakt mig på
+                <a href="mailto:benjamin.dals.hughes@gmail.com"
+                    >benjamin.dals.hughes@gmail.com</a
+                >
+            </p>
+        </footer>
+    </body>
+</html>
