@@ -10,8 +10,8 @@ const SocialTags = require("social-tags-webpack-plugin");
 const buildPath = path.resolve(__dirname, "dist");
 
 const appUrl = "https://hvorlangtervi.dk";
-const appTitle = "Hvor langt er vi med vaccinationerne i Danmark?";
-const appDescription = "Se hvor langt Danmark er kommet med vaccinationerne";
+const appTitle = "Hvor langt er Danmark med Covid-19 vaccinationerne?";
+const appDescription = "Få et hurtigt overblik. Det er nemt og simpelt!";
 
 const CnameWebpackPlugin = require("cname-webpack-plugin");
 
