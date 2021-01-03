@@ -13,6 +13,8 @@ const appUrl = "https://hvorlangtervi.dk";
 const appTitle = "Hvor langt er vi med vaccinationerne i Danmark?";
 const appDescription = "Se hvor langt Danmark er kommet med vaccinationerne";
 
+const CnameWebpackPlugin = require("cname-webpack-plugin");
+
 module.exports = {
     devtool: "source-map",
     entry: "./src/index.js",
@@ -158,6 +160,9 @@ module.exports = {
                 "twitter:description": appDescription,
                 "twitter:image": "./src/assets/social-twitter.png",
             },
+        }),
+        new CnameWebpackPlugin({
+            domain: "hvorlangtervi.dk",
         }),
     ],
 };
