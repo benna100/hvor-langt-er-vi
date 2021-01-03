@@ -93,6 +93,10 @@ section.graphs {
             transition: background-color 0.1s;
             cursor: pointer;
 
+            @media only screen and (max-device-width: 400px) {
+                font-size: 0.9rem;
+            }
+
             &:nth-child(1),
             &:nth-child(2) {
                 margin-right: 8px;
