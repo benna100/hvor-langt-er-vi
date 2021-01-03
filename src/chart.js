@@ -54,6 +54,13 @@ const totalChart = new Chart(canvasContextTotal, {
                 },
             ],
         },
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItem) {
+                    return parseInt(tooltipItem.value).toLocaleString("da");
+                },
+            },
+        },
     },
 });
 
@@ -82,10 +89,6 @@ const perDayChart = new Chart(canvasContextPerDay, {
             mode: "index",
             intersect: false,
         },
-        hover: {
-            mode: "nearest",
-            intersect: true,
-        },
         legend: {
             display: false,
         },
@@ -98,6 +101,13 @@ const perDayChart = new Chart(canvasContextPerDay, {
                     },
                 },
             ],
+        },
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItem) {
+                    return parseInt(tooltipItem.value).toLocaleString("da");
+                },
+            },
         },
     },
 });
@@ -128,9 +138,14 @@ const percentChart = new Chart(canvasContextPercent, {
             mode: "index",
             intersect: false,
         },
-        hover: {
-            mode: "nearest",
-            intersect: true,
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItem, data) {
+                    return parseInt(
+                        data.datasets[0].data[tooltipItem.index]
+                    ).toLocaleString("da");
+                },
+            },
         },
     },
 });

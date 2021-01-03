@@ -11,22 +11,27 @@
     },
     {
         "date": "29-12-2020",
-        "perDay": 7446,
-        "percentageTotal": 0.26
+        "perDay": 7670,
+        "percentageTotal": 0.27
     },
     {
         "date": "30-12-2020",
-        "perDay": 9491,
+        "perDay": 9622,
         "percentageTotal": 0.43
     },
     {
         "date": "31-12-2020",
-        "perDay": 5171,
-        "percentageTotal": 0.51
+        "perDay": 5318,
+        "percentageTotal": 0.52
     },
     {
         "date": "01-01-2021",
-        "perDay": 2263,
-        "percentageTotal": 0.54
+        "perDay": 2352,
+        "percentageTotal": 0.56
+    },
+    {
+        "date": "02-01-2021",
+        "perDay": 7583,
+        "percentageTotal": 0.69
     }
 ]

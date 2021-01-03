@@ -11,7 +11,7 @@ Date.prototype.addDays = function (days) {
 };
 
 const totalDanes = helper.getTotalDanes();
-const numberOfDaysForAverage = 6;
+const numberOfDaysForAverage = 7;
 
 const totalVaccinatedElement = document.querySelector(
     "h2.total-vaccinated strong"
