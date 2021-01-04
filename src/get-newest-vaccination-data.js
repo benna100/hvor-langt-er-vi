@@ -1,10 +1,6 @@
 var pdf2table = require("pdf2table");
 var fs = require("fs");
 
-var http = require("http");
-
-var request = require("request");
-
 var wget = require("node-wget-promise");
 wget(
     "https://files.ssi.dk/covid19/vaccinationstilslutning/vaccinationstilslutning-04012021-ja21"
