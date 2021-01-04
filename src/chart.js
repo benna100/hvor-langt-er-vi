@@ -142,7 +142,12 @@ const percentChart = new Chart(canvasContextPercent, {
         labels: ["Vaccinerede", "Ikke vaccinerede"],
         datasets: [
             {
-                data: [totalNumberOfVaccinated, restToVaccinate],
+                data: [
+                    vaccinationData[vaccinationData.length - 1].percentageTotal,
+                    100 -
+                        vaccinationData[vaccinationData.length - 1]
+                            .percentageTotal,
+                ],
                 label: "Per dag",
                 borderColor: "transparent",
                 backgroundColor: ["#3fb8af", "#ccc"],
@@ -159,9 +164,9 @@ const percentChart = new Chart(canvasContextPercent, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItem, data) {
-                    return parseInt(
+                    return `${parseFloat(
                         data.datasets[0].data[tooltipItem.index]
-                    ).toLocaleString("da");
+                    ).toLocaleString("da")}%`;
                 },
             },
         },
