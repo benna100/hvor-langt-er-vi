@@ -65,7 +65,7 @@ h2 {
 
 h3 {
     font-size: 1.3rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
     margin-bottom: 36px;
 }
 
@@ -76,7 +76,7 @@ strong {
 section.graphs {
     height: 400px;
     position: relative;
-    margin-bottom: 136px;
+    margin-bottom: 148px;
 
     .graphs-wrapper {
         display: flex;
@@ -92,6 +92,7 @@ section.graphs {
             border-radius: 4px;
             transition: background-color 0.1s;
             cursor: pointer;
+            line-height: 1.3rem;
 
             @media only screen and (max-device-width: 400px) {
                 font-size: 0.9rem;
@@ -115,7 +116,7 @@ section.graphs {
 
     canvas {
         position: absolute;
-        top: 100px;
+        top: 112px;
         left: 0;
     }
 }

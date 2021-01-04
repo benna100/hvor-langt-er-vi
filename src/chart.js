@@ -2,6 +2,11 @@ import vaccinationData from "./data/vaccination.json";
 import helper from "./helper.js";
 import Chart from "chart.js";
 
+const viewportWidth = Math.max(
+    document.documentElement.clientWidth,
+    window.innerWidth || 0
+);
+
 const dates = vaccinationData.map((day) => day.date);
 const perDay = vaccinationData.map((day) => day.perDay);
 
@@ -20,9 +25,9 @@ const totalNumberOfVaccinated = vaccinationData.reduce(
 
 const restToVaccinate = totalDanes - totalNumberOfVaccinated;
 
-const canvasContextTotal = document
-    .querySelector("canvas.total-vaccinated")
-    .getContext("2d");
+const canvasTotal = document.querySelector("canvas.total-vaccinated");
+
+const canvasContextTotal = canvasTotal.getContext("2d");
 
 const totalChart = new Chart(canvasContextTotal, {
     type: "line",

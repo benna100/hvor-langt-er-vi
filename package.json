@@ -9,7 +9,8 @@
         "build": "webpack --config webpack.prod.js --mode production",
         "preview": "npm run build && http-server dist",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d dist",
+        "getVaccinationData": "node src/get-newest-vaccination-data.js"
     },
     "repository": {
         "type": "git",
@@ -56,6 +57,11 @@
         "webpack-dev-server": "^3.1.10"
     },
     "dependencies": {
-        "chart.js": "^2.9.4"
+        "chart.js": "^2.9.4",
+        "node-wget-promise": "^0.1.6",
+        "pdf-table-extractor": "^1.0.3",
+        "pdf2csv": "^0.1.4",
+        "pdf2table": "0.0.2",
+        "pdfreader": "^1.2.8"
     }
 }
