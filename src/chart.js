@@ -53,6 +53,15 @@ const totalChart = new Chart(canvasContextTotal, {
                     },
                 },
             ],
+            yAxes: [
+                {
+                    ticks: {
+                        callback: function (value) {
+                            return parseInt(value).toLocaleString("da");
+                        },
+                    },
+                },
+            ],
         },
         tooltips: {
             callbacks: {
@@ -98,6 +107,15 @@ const perDayChart = new Chart(canvasContextPerDay, {
                     scaleLabel: {
                         display: false,
                         labelString: "Dato",
+                    },
+                },
+            ],
+            yAxes: [
+                {
+                    ticks: {
+                        callback: function (value) {
+                            return parseInt(value).toLocaleString("da");
+                        },
                     },
                 },
             ],
