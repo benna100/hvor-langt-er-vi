@@ -3,7 +3,7 @@ var fs = require("fs");
 
 var wget = require("node-wget-promise");
 wget(
-    "https://files.ssi.dk/covid19/vaccinationstilslutning/vaccinationstilslutning-04012021-ja21"
+    "https://files.ssi.dk/covid19/vaccinationstilslutning/vaccinationstilslutning-05012021-dd10"
 ).then((response) => {
     const fileName = response.headers["content-disposition"]
         .split('filename="')[1]
