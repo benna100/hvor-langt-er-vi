@@ -49,13 +49,24 @@ function getDateWhenEveryoneIsVaccinated(vaccinationData) {
     );
 
     const vaccinatedPerDay = totalVaccinated / numberOfDaysForAverage;
-    const missingPeopleToVaccinate = totalDanes - totalNumberOfVaccinated;
+
+    // https://sundhedsdatastyrelsen.dk/da/nyheder/2019/foedsler_28052019
+    const numberOfPregnantPeople = 61273;
+    // https://www.dst.dk/da/Statistik/emner/befolkning-og-valg/husstande-familier-boern/boern
+    const numberOfYoungPeople = 1168222;
+
+    const missingPeopleToVaccinate =
+        totalDanes -
+        totalNumberOfVaccinated -
+        numberOfPregnantPeople -
+        numberOfYoungPeople;
 
     const numberOfDaysToVaccinateRest =
         missingPeopleToVaccinate / vaccinatedPerDay;
 
     const lastDateString =
         dataToMakeAverageFrom[dataToMakeAverageFrom.length - 1].date;
+
     const [day, month, year] = lastDateString.split("-");
     const latestDate = new Date(`${year}-${month}-${day}`);
 
