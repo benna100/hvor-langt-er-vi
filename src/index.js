@@ -39,8 +39,8 @@ totalPercentageElement.innerHTML = totalPercentageVaccinated.toLocaleString(
 
 function getDateWhenEveryoneIsVaccinated(vaccinationData) {
     const dataToMakeAverageFrom = vaccinationData.slice(
-        vaccinationData.length - numberOfDaysForAverage - 1,
-        vaccinationData.length - 1
+        vaccinationData.length - numberOfDaysForAverage,
+        vaccinationData.length
     );
 
     const totalVaccinated = dataToMakeAverageFrom.reduce(
