@@ -10,11 +10,26 @@ Date.prototype.addDays = function (days) {
     return date;
 };
 
+const language = helper.getDanguage();
+
 const totalDanes = helper.getTotalDanes();
 const numberOfDaysForAverage = 7;
 
 const totalVaccinatedElement = document.querySelector(
-    "h2.total-vaccinated strong"
+    "h2.total-vaccinated strong.total-vaccinated"
+);
+
+const lastVaccinationDateElement = document.querySelector(
+    "h2.total-vaccinated span.last-vaccination-date"
+);
+
+const [day, month, year] = vaccinationData[
+    vaccinationData.length - 1
+].date.split("-");
+const lastVaccinationDate = new Date(`${year}-${month}-${day}`);
+lastVaccinationDateElement.innerHTML = helper.getFormattedDate(
+    lastVaccinationDate,
+    language
 );
 
 const totalPercentageElement = document.querySelector(
@@ -31,10 +46,12 @@ const totalNumberOfVaccinated = vaccinationData.reduce(
 const totalPercentageVaccinated =
     vaccinationData[vaccinationData.length - 1].percentageTotal;
 
-totalVaccinatedElement.innerHTML = totalNumberOfVaccinated.toLocaleString("da");
+totalVaccinatedElement.innerHTML = totalNumberOfVaccinated.toLocaleString(
+    language
+);
 
 totalPercentageElement.innerHTML = totalPercentageVaccinated.toLocaleString(
-    "da"
+    language
 );
 
 function getDateWhenEveryoneIsVaccinated(vaccinationData) {
@@ -78,24 +95,10 @@ function getDateWhenEveryoneIsVaccinated(vaccinationData) {
 }
 const vavacationsPerDay = getDateWhenEveryoneIsVaccinated(vaccinationData);
 
-const danishMonths = [
-    "januar",
-    "februar",
-    "marts",
-    "april",
-    "maj",
-    "juni",
-    "juli",
-    "august",
-    "september",
-    "oktober",
-    "november",
-    "december",
-];
-
-whenDoneElement.innerHTML = `d. ${vavacationsPerDay.getDate()}. ${
-    danishMonths[vavacationsPerDay.getMonth()]
-} ${vavacationsPerDay.getFullYear()}`;
+whenDoneElement.innerHTML = helper.getFormattedDate(
+    vavacationsPerDay,
+    language
+);
 
 function _resetActiveButtons(buttonElements) {
     buttonElements.forEach((buttonElement) => {

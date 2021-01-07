@@ -9,10 +9,10 @@ module.exports = {
         // access from mobile on same network
         //host: '192.168.1.1', <-- your ip here
         port: 8080,
-        contentBase: path.join(__dirname, "dist")
+        contentBase: path.join(__dirname, "dist"),
     },
     node: {
-        fs: "empty"
+        fs: "empty",
     },
     module: {
         rules: [
@@ -21,8 +21,8 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 options: {
-                    presets: ["env"]
-                }
+                    presets: ["env"],
+                },
             },
             {
                 test: /\.(scss|css)$/,
@@ -31,15 +31,15 @@ module.exports = {
                         // creates style nodes from JS strings
                         loader: "style-loader",
                         options: {
-                            sourceMap: true
-                        }
+                            sourceMap: true,
+                        },
                     },
                     {
                         // translates CSS into CommonJS
                         loader: "css-loader",
                         options: {
-                            sourceMap: true
-                        }
+                            sourceMap: true,
+                        },
                     },
                     {
                         // compiles Sass to CSS
@@ -47,15 +47,15 @@ module.exports = {
                         options: {
                             outputStyle: "expanded",
                             sourceMap: true,
-                            sourceMapContents: true
-                        }
-                    }
+                            sourceMapContents: true,
+                        },
+                    },
                     // Please note we are not running postcss here
-                ]
+                ],
             },
             {
                 test: /\.html$/,
-                use: ["html-loader"]
+                use: ["html-loader"],
             },
             {
                 test: /\.(jpg|png)$/,
@@ -65,17 +65,17 @@ module.exports = {
                         options: {
                             name: "[name].[ext]",
                             outputPath: "assets/",
-                            publicPath: "assets/"
-                        }
-                    }
-                ]
-            }
-        ]
+                            publicPath: "assets/",
+                        },
+                    },
+                ],
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./index.html",
-            inject: true
-        })
-    ]
+            inject: true,
+        }),
+    ],
 };

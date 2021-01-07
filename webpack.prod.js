@@ -17,7 +17,7 @@ const CnameWebpackPlugin = require("cname-webpack-plugin");
 
 module.exports = {
     devtool: "source-map",
-    entry: "./src/index.js",
+    entry: { main: "./src/index.js" },
     output: {
         filename: "[name].[hash:20].js",
         path: buildPath,
@@ -91,6 +91,11 @@ module.exports = {
             template: "./index.html",
             // Inject the js bundle at the end of the body of the given template
             inject: "body",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "english.html",
+            template: "english.html",
+            chunks: ["main"],
         }),
         new CleanWebpackPlugin(buildPath),
         new FaviconsWebpackPlugin({

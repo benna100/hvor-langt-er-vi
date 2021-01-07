@@ -15,4 +15,49 @@ function isMobileDevice() {
 }
 
 const getTotalDanes = () => 5780980;
-export default { isMobileDevice, getTotalDanes };
+
+const danishMonths = [
+    "januar",
+    "februar",
+    "marts",
+    "april",
+    "maj",
+    "juni",
+    "juli",
+    "august",
+    "september",
+    "oktober",
+    "november",
+    "december",
+];
+
+const englishMonths = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+];
+
+function getFormattedDate(date, language) {
+    const dansishDate = `d. ${date.getDate()}. ${
+        danishMonths[date.getMonth()]
+    } ${date.getFullYear()}`;
+
+    const englishDate = `${
+        englishMonths[date.getMonth()]
+    } ${date.getDate()}, ${date.getFullYear()}`;
+
+    return language === "en" ? englishDate : dansishDate;
+}
+
+const getDanguage = () => (location.href.includes("english") ? "en" : "da");
+
+export default { isMobileDevice, getTotalDanes, getFormattedDate, getDanguage };

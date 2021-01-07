@@ -27,7 +27,7 @@ body {
     font-family: "Montserrat", sans-serif;
     position: relative;
     min-height: 100vh;
-    padding-top: 24px;
+    padding-top: 36px;
 }
 
 main {
@@ -67,6 +67,12 @@ h3 {
     font-size: 1.3rem;
     line-height: 2rem;
     margin-bottom: 36px;
+}
+
+nav {
+    position: absolute;
+    top: 12px;
+    right: 12px;
 }
 
 strong {

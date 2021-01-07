@@ -7,6 +7,8 @@ const viewportWidth = Math.max(
     window.innerWidth || 0
 );
 
+const language = helper.getDanguage();
+
 const dates = vaccinationData.map((day) => day.date);
 const perDay = vaccinationData.map((day) => day.perDay);
 
@@ -54,7 +56,7 @@ const totalChart = new Chart(canvasContextTotal, {
                 {
                     scaleLabel: {
                         display: false,
-                        labelString: "Dato",
+                        labelString: language === "en" ? "Date" : "Dato",
                     },
                 },
             ],
@@ -62,7 +64,7 @@ const totalChart = new Chart(canvasContextTotal, {
                 {
                     ticks: {
                         callback: function (value) {
-                            return parseInt(value).toLocaleString("da");
+                            return parseInt(value).toLocaleString(language);
                         },
                     },
                 },
@@ -71,7 +73,7 @@ const totalChart = new Chart(canvasContextTotal, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItem) {
-                    return parseInt(tooltipItem.value).toLocaleString("da");
+                    return parseInt(tooltipItem.value).toLocaleString(language);
                 },
             },
         },
@@ -89,7 +91,7 @@ const perDayChart = new Chart(canvasContextPerDay, {
         datasets: [
             {
                 data: perDay,
-                label: "Per dag",
+                label: language === "en" ? "Per date" : "Per Dato",
                 borderColor: "#3e95cd",
                 backgroundColor: "#3fb8af",
                 labels: dates,
@@ -111,7 +113,7 @@ const perDayChart = new Chart(canvasContextPerDay, {
                 {
                     scaleLabel: {
                         display: false,
-                        labelString: "Dato",
+                        labelString: language === "en" ? "Date" : "Dato",
                     },
                 },
             ],
@@ -119,7 +121,7 @@ const perDayChart = new Chart(canvasContextPerDay, {
                 {
                     ticks: {
                         callback: function (value) {
-                            return parseInt(value).toLocaleString("da");
+                            return parseInt(value).toLocaleString(language);
                         },
                     },
                 },
@@ -128,7 +130,7 @@ const perDayChart = new Chart(canvasContextPerDay, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItem) {
-                    return parseInt(tooltipItem.value).toLocaleString("da");
+                    return parseInt(tooltipItem.value).toLocaleString(language);
                 },
             },
         },
@@ -144,7 +146,10 @@ const canvasContextPercent = canvasPercent.getContext("2d");
 const percentChart = new Chart(canvasContextPercent, {
     type: "pie",
     data: {
-        labels: ["Vaccinerede", "Ikke vaccinerede"],
+        labels: [
+            language === "en" ? "Vaccinated" : "vaccinerede",
+            language === "en" ? "Not vaccinated" : "Ikke vaccinerede",
+        ],
         datasets: [
             {
                 data: [
@@ -153,7 +158,7 @@ const percentChart = new Chart(canvasContextPercent, {
                         vaccinationData[vaccinationData.length - 1]
                             .percentageTotal,
                 ],
-                label: "Per dag",
+                label: language === "en" ? "Per date" : "Per Dato",
                 borderColor: "transparent",
                 backgroundColor: ["#3fb8af", "#ccc"],
             },
@@ -171,7 +176,7 @@ const percentChart = new Chart(canvasContextPercent, {
                 label: function (tooltipItem, data) {
                     return `${parseFloat(
                         data.datasets[0].data[tooltipItem.index]
-                    ).toLocaleString("da")}%`;
+                    ).toLocaleString(language)}%`;
                 },
             },
         },
