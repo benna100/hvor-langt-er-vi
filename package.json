@@ -10,7 +10,7 @@
         "preview": "npm run build && http-server dist",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
-        "getVaccinationData": "node src/get-newest-vaccination-data.js"
+        "data": "node src/get-newest-vaccination-data.js"
     },
     "repository": {
         "type": "git",
