@@ -1,1 +1,22 @@
-[{"date":"27-12-2020","perDay":6510,"percentageTotal":0.11},{"date":"28-12-2020","perDay":1983,"percentageTotal":0.15},{"date":"29-12-2020","perDay":8914,"percentageTotal":0.3},{"date":"30-12-2020","perDay":11413,"percentageTotal":0.49},{"date":"31-12-2020","perDay":6299,"percentageTotal":0.6},{"date":"01-01-2021","perDay":2370,"percentageTotal":0.64},{"date":"02-01-2021","perDay":8937,"percentageTotal":0.8},{"date":"03-01-2021","perDay":5989,"percentageTotal":0.9},{"date":"04-01-2021","perDay":2418,"percentageTotal":0.94},{"date":"05-01-2021","perDay":13077,"percentageTotal":1.16},{"date":"06-01-2021","perDay":19305,"percentageTotal":1.49},{"date":"07-01-2021","perDay":16875,"percentageTotal":1.78},{"date":"08-01-2021","perDay":8337,"percentageTotal":1.93}]
+[
+    { "date": "27-12-2020", "perDay": 6556, "percentageTotal": 0.11 },
+    { "date": "28-12-2020", "perDay": 1983, "percentageTotal": 0.15 },
+    { "date": "29-12-2020", "perDay": 9017, "percentageTotal": 0.3 },
+    { "date": "30-12-2020", "perDay": 11466, "percentageTotal": 0.5 },
+    { "date": "31-12-2020", "perDay": 6278, "percentageTotal": 0.6 },
+    { "date": "01-01-2021", "perDay": 2364, "percentageTotal": 0.65 },
+    { "date": "02-01-2021", "perDay": 8942, "percentageTotal": 0.8 },
+    { "date": "03-01-2021", "perDay": 5996, "percentageTotal": 0.9 },
+    { "date": "04-01-2021", "perDay": 2427, "percentageTotal": 0.94 },
+    { "date": "05-01-2021", "perDay": 13534, "percentageTotal": 1.17 },
+    { "date": "06-01-2021", "perDay": 19955, "percentageTotal": 1.52 },
+    { "date": "07-01-2021", "perDay": 17595, "percentageTotal": 1.82 },
+    { "date": "08-01-2021", "perDay": 8469, "percentageTotal": 1.96 },
+    { "date": "09-01-2021", "perDay": 1898, "percentageTotal": 1.99 },
+    { "date": "10-01-2021", "perDay": 813, "percentageTotal": 2.01 },
+    { "date": "11-01-2021", "perDay": 657, "percentageTotal": 2.02 },
+    { "date": "12-01-2021", "perDay": 454, "percentageTotal": 2.03 },
+    { "date": "13-01-2021", "perDay": 11898, "percentageTotal": 2.23 },
+    { "date": "14-01-2021", "perDay": 17671, "percentageTotal": 2.54 },
+    { "date": "15-01-2021", "perDay": 14311, "percentageTotal": 2.78 }
+]

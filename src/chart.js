@@ -58,6 +58,9 @@ const totalChart = new Chart(canvasContextTotal, {
                         display: false,
                         labelString: language === "en" ? "Date" : "Dato",
                     },
+                    ticks: {
+                        maxTicksLimit: 10,
+                    },
                 },
             ],
             yAxes: [
@@ -114,6 +117,9 @@ const perDayChart = new Chart(canvasContextPerDay, {
                     scaleLabel: {
                         display: false,
                         labelString: language === "en" ? "Date" : "Dato",
+                    },
+                    ticks: {
+                        maxTicksLimit: 10,
                     },
                 },
             ],
