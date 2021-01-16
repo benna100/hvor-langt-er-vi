@@ -27,7 +27,14 @@ got("https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning")
                             const matchDateRegex = /\d{2}-\d{2}-\d{4}/;
                             const isStringADate = matchDateRegex.test(row[0]);
                             if (isStringADate) {
-                                let [date, perDay, _, percentageTotal] = row;
+                                let [
+                                    date,
+                                    perDay,
+                                    _,
+                                    percentageTotal,
+                                    vaccinationDonePerDay,
+                                    percentageTotalDone,
+                                ] = row;
                                 perDay = parseInt(perDay.replace(".", ""));
                                 percentageTotal = parseFloat(
                                     percentageTotal.replace(",", ".")
@@ -40,7 +47,7 @@ got("https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning")
                             }
                         }
                     });
-                    // exportJson(vaccinationData, "src/data/vaccination.json");
+                    exportJson(vaccinationData, "src/data/vaccination.json");
                 });
             });
         });
