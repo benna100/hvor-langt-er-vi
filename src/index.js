@@ -44,7 +44,7 @@ const totalPercentageElement = document.querySelector(
     "strong.total-percentage"
 );
 
-const whenDoneElement = document.querySelector("h3.when-done strong");
+const whenDoneElement = document.querySelector("strong.when-done");
 
 const totalNumberOfVaccinated = vaccinationData.reduce(
     (acc, current) => acc + current.perDay,
