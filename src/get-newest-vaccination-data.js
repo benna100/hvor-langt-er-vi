@@ -23,7 +23,7 @@ got("https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning")
                     if (err) return console.log(err);
                     const vaccinationData = [];
                     rows.forEach((row) => {
-                        if (row.length === 6) {
+                        if (row.length === 7) {
                             const matchDateRegex = /\d{2}-\d{2}-\d{4}/;
                             const isStringADate = matchDateRegex.test(row[0]);
                             if (isStringADate) {
