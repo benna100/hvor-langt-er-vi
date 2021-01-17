@@ -147,6 +147,15 @@ function toggleButtons(buttonElements, onButtonClick) {
 const totalCanvas = document.querySelector("canvas.total-vaccinated");
 const perDayCanvas = document.querySelector("canvas.per-day-vaccinated");
 const percentCanvas = document.querySelector("canvas.percent");
+const totalCanvasCompleted = document.querySelector(
+    "canvas.total-vaccinated-completed"
+);
+const perDayCanvasCompleted = document.querySelector(
+    "canvas.per-day-vaccinated-completed"
+);
+const percentCanvasCompleted = document.querySelector(
+    "canvas.percent-completed"
+);
 
 const transportationButtons = document.querySelectorAll(
     ".graphs-wrapper button"
@@ -156,15 +165,48 @@ toggleButtons([...transportationButtons], (key) => {
         totalCanvas.style.display = "block";
         perDayCanvas.style.display = "none";
         percentCanvas.style.display = "none";
+        totalCanvasCompleted.style.display = "none";
+        perDayCanvasCompleted.style.display = "none";
+        percentCanvasCompleted.style.display = "none";
     }
     if (key === "per-day") {
         totalCanvas.style.display = "none";
         perDayCanvas.style.display = "block";
         percentCanvas.style.display = "none";
+        totalCanvasCompleted.style.display = "none";
+        perDayCanvasCompleted.style.display = "none";
+        percentCanvasCompleted.style.display = "none";
     }
     if (key === "percent") {
         totalCanvas.style.display = "none";
         perDayCanvas.style.display = "none";
         percentCanvas.style.display = "block";
+        totalCanvasCompleted.style.display = "none";
+        perDayCanvasCompleted.style.display = "none";
+        percentCanvasCompleted.style.display = "none";
+    }
+    if (key === "total-completed") {
+        totalCanvas.style.display = "none";
+        perDayCanvas.style.display = "none";
+        percentCanvas.style.display = "none";
+        totalCanvasCompleted.style.display = "block";
+        perDayCanvasCompleted.style.display = "none";
+        percentCanvasCompleted.style.display = "none";
+    }
+    if (key === "per-day-completed") {
+        totalCanvas.style.display = "none";
+        perDayCanvas.style.display = "none";
+        percentCanvas.style.display = "none";
+        totalCanvasCompleted.style.display = "none";
+        perDayCanvasCompleted.style.display = "block";
+        percentCanvasCompleted.style.display = "none";
+    }
+    if (key === "percent-completed") {
+        totalCanvas.style.display = "none";
+        perDayCanvas.style.display = "none";
+        percentCanvas.style.display = "none";
+        percentCanvasCompleted.style.display = "none";
+        perDayCanvasCompleted.style.display = "none";
+        percentCanvasCompleted.style.display = "block";
     }
 });

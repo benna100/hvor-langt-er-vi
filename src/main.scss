@@ -89,9 +89,8 @@ strong {
 }
 
 section.graphs {
-    height: 400px;
     position: relative;
-    margin-bottom: 148px;
+    margin-bottom: 36px;
 
     .graphs-wrapper {
         > p {
@@ -137,11 +136,10 @@ section.graphs {
         margin-bottom: 12px;
     }
 
-    // canvas {
-    //     position: absolute;
-    //     top: 112px;
-    //     left: 0;
-    // }
+    .canvas-wrapper {
+        margin-top: 36px;
+        height: 400px;
+    }
 }
 
 section.data {

@@ -75,23 +75,47 @@
             <section class="graphs">
                 <h2>Explore data</h2>
                 <div class="graphs-wrapper">
-                    <button data-key="total" class="active">
-                        Vaccinated total
-                    </button>
-                    <button data-key="per-day">Vaccinated per day</button>
-                    <button data-key="percent">Percent done</button>
+                    <p>started vaccination</p>
+                    <div class="button-row">
+                        <button data-key="total" class="active">Total</button>
+                        <button data-key="per-day">Per day</button>
+                        <button data-key="percent">Percentage</button>
+                    </div>
+                    <p>Vaccination done</p>
+                    <div class="button-row">
+                        <button data-key="total-completed">Total</button>
+                        <button data-key="per-day-completed">Per day</button>
+                        <button data-key="percent-completed">Percentage</button>
+                    </div>
                 </div>
-                <canvas
-                    class="total-vaccinated"
-                    width="400"
-                    height="400"
-                ></canvas>
-                <canvas
-                    class="per-day-vaccinated"
-                    width="400"
-                    height="400"
-                ></canvas>
-                <canvas class="percent" width="400" height="400"></canvas>
+                <div class="canvas-wrapper">
+                    <canvas
+                        class="total-vaccinated"
+                        width="400"
+                        height="400"
+                    ></canvas>
+                    <canvas
+                        class="per-day-vaccinated"
+                        width="400"
+                        height="400"
+                    ></canvas>
+                    <canvas class="percent" width="400" height="400"></canvas>
+                    <canvas
+                        class="total-vaccinated-completed"
+                        width="400"
+                        height="400"
+                    ></canvas>
+                    <canvas
+                        class="per-day-vaccinated-completed"
+                        width="400"
+                        height="400"
+                    ></canvas>
+                    <canvas
+                        class="percent-completed"
+                        width="400"
+                        height="400"
+                    ></canvas>
+                </div>
             </section>
             <section class="data">
                 <p>
