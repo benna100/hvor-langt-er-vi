@@ -42,23 +42,34 @@
         </nav>
         <main>
             <h1>Hvor langt er Danmark med Covid-19 vaccinationerne?</h1>
-            <h2 class="total-vaccinated">
-                <p>
-                    Vi har
-                    <span class="last-vaccination-date"></span> vaccineret
-                    <strong class="total-vaccinated"></strong> personer første
-                    gang
-                </p>
-            </h2>
-
-            <h3 class="total-percentage">
-                Det svarer til at <strong></strong> procent af befolkningen
-            </h3>
-
-            <h3 class="when-done">
-                Med den hastighed er alle vaccineret
-                <strong></strong> *
-            </h3>
+            <section class="completed">
+                <h2 class="total-vaccinated-completed">
+                    <p>
+                        Vi har
+                        <span class="last-vaccination-date"></span>
+                        <strong>færdig vaccineret</strong>
+                        <strong class="total-vaccinated-completed"></strong>.
+                        Det svarer til at
+                        <strong class="total-percentage-completed"></strong>
+                        procent af befolkningen
+                    </p>
+                </h2>
+            </section>
+            <section class="started">
+                <h2 class="total-vaccinated">
+                    <p>
+                        Vi har desuden påbegyndt vaccination for
+                        <strong class="total-vaccinated"></strong> personer. Det
+                        svarer til at
+                        <strong class="total-percentage"></strong>
+                        procent af befolkningen
+                    </p>
+                </h2>
+                <h3 class="when-done">
+                    Med den hastighed har alle danskere
+                    <strong>påbegyndt</strong> vaccination <strong></strong> *
+                </h3>
+            </section>
             <section class="graphs">
                 <h2>Udforsk data</h2>
                 <div class="graphs-wrapper">
@@ -66,7 +77,16 @@
                         Vaccinerede total
                     </button>
                     <button data-key="per-day">Vaccinerede per dag</button>
-                    <button data-key="percent">Procentvis færdig</button>
+                    <button data-key="percent">Procentvis vaccinerede</button>
+                    <!-- <button data-key="total-completed">
+                        Færdig vaccinerede total
+                    </button>
+                    <button data-key="per-day-completed">
+                        Færdig vaccinerede per dag
+                    </button>
+                    <button data-key="percent-completed">
+                        Procentvis færdig vaccinerede
+                    </button> -->
                 </div>
                 <canvas
                     class="total-vaccinated"

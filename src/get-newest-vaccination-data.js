@@ -32,17 +32,27 @@ got("https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning")
                                     perDay,
                                     _,
                                     percentageTotal,
-                                    vaccinationDonePerDay,
-                                    percentageTotalDone,
+                                    perDayCompleted,
+                                    __,
+                                    percentageTotalCompleted,
                                 ] = row;
+
                                 perDay = parseInt(perDay.replace(".", ""));
+                                perDayCompleted = parseInt(
+                                    perDayCompleted.replace(".", "")
+                                );
                                 percentageTotal = parseFloat(
                                     percentageTotal.replace(",", ".")
+                                );
+                                percentageTotalCompleted = parseFloat(
+                                    percentageTotalCompleted.replace(",", ".")
                                 );
                                 vaccinationData.push({
                                     date,
                                     perDay,
                                     percentageTotal,
+                                    perDayCompleted,
+                                    percentageTotalCompleted,
                                 });
                             }
                         }

@@ -19,8 +19,16 @@ const totalVaccinatedElement = document.querySelector(
     "h2.total-vaccinated strong.total-vaccinated"
 );
 
+const totalVaccinatedCompletedElement = document.querySelector(
+    "strong.total-vaccinated-completed"
+);
+
+const totalVaccinatedPercentageCompletedElement = document.querySelector(
+    "strong.total-percentage-completed"
+);
+
 const lastVaccinationDateElement = document.querySelector(
-    "h2.total-vaccinated span.last-vaccination-date"
+    "span.last-vaccination-date"
 );
 
 const [day, month, year] = vaccinationData[
@@ -33,7 +41,7 @@ lastVaccinationDateElement.innerHTML = helper.getFormattedDate(
 );
 
 const totalPercentageElement = document.querySelector(
-    "h3.total-percentage strong"
+    "strong.total-percentage"
 );
 
 const whenDoneElement = document.querySelector("h3.when-done strong");
@@ -43,11 +51,27 @@ const totalNumberOfVaccinated = vaccinationData.reduce(
     0
 );
 
+const totalNumberOfVaccinatedCompleted = vaccinationData
+    .filter((data) => data.perDayCompleted !== null)
+    .reduce((acc, current) => acc + current.perDayCompleted, 0);
+
 const totalPercentageVaccinated =
     vaccinationData[vaccinationData.length - 1].percentageTotal;
 
+const totalPercentageVaccinatedCompleted =
+    vaccinationData[vaccinationData.length - 1].percentageTotalCompleted;
+
 totalVaccinatedElement.innerHTML = totalNumberOfVaccinated.toLocaleString(
     language
+);
+
+totalVaccinatedCompletedElement.innerHTML = totalNumberOfVaccinatedCompleted.toLocaleString(
+    language
+);
+
+totalVaccinatedPercentageCompletedElement.innerHTML = totalPercentageVaccinatedCompleted.toLocaleString(
+    language,
+    { minimumFractionDigits: 5 }
 );
 
 totalPercentageElement.innerHTML = totalPercentageVaccinated.toLocaleString(
