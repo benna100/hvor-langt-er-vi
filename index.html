@@ -74,20 +74,18 @@
             <section class="graphs">
                 <h2>Udforsk data</h2>
                 <div class="graphs-wrapper">
-                    <button data-key="total" class="active">
-                        Vaccinerede total
-                    </button>
-                    <button data-key="per-day">Vaccinerede per dag</button>
-                    <button data-key="percent">Procentvis vaccinerede</button>
-                    <!-- <button data-key="total-completed">
-                        Færdig vaccinerede total
-                    </button>
-                    <button data-key="per-day-completed">
-                        Færdig vaccinerede per dag
-                    </button>
-                    <button data-key="percent-completed">
-                        Procentvis færdig vaccinerede
-                    </button> -->
+                    <p>Påbegyndt vacinerede</p>
+                    <div class="button-row">
+                        <button data-key="total" class="active">Total</button>
+                        <button data-key="per-day">Per dag</button>
+                        <button data-key="percent">Procentvis</button>
+                    </div>
+                    <p>Færdig vacinerede</p>
+                    <div class="button-row">
+                        <button data-key="total-completed">Total</button>
+                        <button data-key="per-day-completed">Per dag</button>
+                        <button data-key="percent-completed">Procentvis</button>
+                    </div>
                 </div>
                 <canvas
                     class="total-vaccinated"

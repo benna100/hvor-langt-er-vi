@@ -94,33 +94,41 @@ section.graphs {
     margin-bottom: 148px;
 
     .graphs-wrapper {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 12px;
+        > p {
+            margin-bottom: 8px;
+        }
+        .button-row:nth-child(2) {
+            margin-bottom: 24px;
+        }
+        .button-row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 12px;
 
-        button {
-            width: 100%;
-            display: block;
-            background-color: transparent;
-            border: 1px lightgrey solid;
-            padding: 6px 8px;
-            border-radius: 4px;
-            transition: background-color 0.1s;
-            cursor: pointer;
-            line-height: 1.3rem;
+            button {
+                width: 100%;
+                display: block;
+                background-color: transparent;
+                border: 1px lightgrey solid;
+                padding: 6px 8px;
+                border-radius: 4px;
+                transition: background-color 0.1s;
+                cursor: pointer;
+                line-height: 1.3rem;
 
-            @media only screen and (max-device-width: 400px) {
-                font-size: 0.9rem;
-            }
+                @media only screen and (max-device-width: 400px) {
+                    font-size: 0.9rem;
+                }
 
-            &:nth-child(1),
-            &:nth-child(2) {
-                margin-right: 8px;
-            }
+                &:nth-child(1),
+                &:nth-child(2) {
+                    margin-right: 8px;
+                }
 
-            &.active {
-                background-color: #3fb8af;
-                color: white;
+                &.active {
+                    background-color: #3fb8af;
+                    color: white;
+                }
             }
         }
     }
@@ -129,11 +137,11 @@ section.graphs {
         margin-bottom: 12px;
     }
 
-    canvas {
-        position: absolute;
-        top: 112px;
-        left: 0;
-    }
+    // canvas {
+    //     position: absolute;
+    //     top: 112px;
+    //     left: 0;
+    // }
 }
 
 section.data {
