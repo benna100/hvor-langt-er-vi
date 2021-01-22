@@ -71,7 +71,7 @@ totalVaccinatedCompletedElement.innerHTML = totalNumberOfVaccinatedCompleted.toL
 
 totalVaccinatedPercentageCompletedElement.innerHTML = totalPercentageVaccinatedCompleted.toLocaleString(
     language,
-    { minimumFractionDigits: 5 }
+    { minimumFractionDigits: 2 }
 );
 
 totalPercentageElement.innerHTML = totalPercentageVaccinated.toLocaleString(
@@ -205,7 +205,7 @@ toggleButtons([...transportationButtons], (key) => {
         totalCanvas.style.display = "none";
         perDayCanvas.style.display = "none";
         percentCanvas.style.display = "none";
-        percentCanvasCompleted.style.display = "none";
+        totalCanvasCompleted.style.display = "none";
         perDayCanvasCompleted.style.display = "none";
         percentCanvasCompleted.style.display = "block";
     }
