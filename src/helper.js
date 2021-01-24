@@ -53,9 +53,10 @@ function getFormattedDate(date, language) {
 
     const englishDate = `${
         englishMonths[date.getMonth()]
-    } ${date.getDate()}, ${date.getFullYear()}`;
+    } ${date.getDate()} ${date.getFullYear()}`;
 
     return language === "en" ? englishDate : dansishDate;
+    test;
 }
 
 const getDanguage = () => (location.href.includes("english") ? "en" : "da");

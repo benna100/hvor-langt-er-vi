@@ -208,5 +208,6 @@ toggleButtons([...transportationButtons], (key) => {
         totalCanvasCompleted.style.display = "none";
         perDayCanvasCompleted.style.display = "none";
         percentCanvasCompleted.style.display = "block";
+        lol;
     }
 });
