@@ -35,7 +35,6 @@
         "css-reset-and-normalize": "^1.0.1",
         "cssnano": "^3.10.0",
         "extract-text-webpack-plugin": "^4.0.0-beta.0",
-        "favicons-webpack-plugin": "0.0.9",
         "file-loader": "^1.1.11",
         "gh-pages": "^2.0.1",
         "html-loader": "^0.5.5",
@@ -58,6 +57,7 @@
     },
     "dependencies": {
         "chart.js": "^2.9.4",
+        "copy-webpack-plugin": "^7.0.0",
         "got": "^11.8.1",
         "jsdom": "^16.4.0",
         "node-wget-promise": "^0.1.6",
