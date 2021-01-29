@@ -17,7 +17,7 @@ got("https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning")
                 .split('filename="')[1]
                 .split(".pdf")[0];
 
-            fs.readFile(fileName, function (err, buffer) {
+            fs.readFile(`./${fileName.toLowerCase()}`, function (err, buffer) {
                 if (err) return console.log(err);
                 pdf2table.parse(buffer, function (err, rows, rowsdebug) {
                     if (err) return console.log(err);
