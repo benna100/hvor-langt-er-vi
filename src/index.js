@@ -10,7 +10,7 @@ Date.prototype.addDays = function (days) {
     return date;
 };
 
-const language = helper.getDanguage();
+const language = helper.getLanguage();
 
 const totalDanes = helper.getTotalDanes();
 const numberOfDaysForAverage = 14;
@@ -31,14 +31,7 @@ const lastVaccinationDateElement = document.querySelector(
     "span.last-vaccination-date"
 );
 
-const [day, month, year] = vaccinationData[
-    vaccinationData.length - 1
-].date.split("-");
-const lastVaccinationDate = new Date(`${year}-${month}-${day}`);
-lastVaccinationDateElement.innerHTML = helper.getFormattedDate(
-    lastVaccinationDate,
-    language
-);
+lastVaccinationDateElement.innerHTML = helper.getLastVaccinationDate();
 
 const totalPercentageElement = document.querySelector(
     "strong.total-percentage"
@@ -46,28 +39,17 @@ const totalPercentageElement = document.querySelector(
 
 const whenDoneElement = document.querySelector("strong.when-done");
 
-const totalNumberOfVaccinated = vaccinationData.reduce(
-    (acc, current) => acc + current.perDay,
-    0
-);
+const totalPercentageVaccinated = helper.getTotalPercentageVaccinated();
 
-const totalNumberOfVaccinatedCompleted = vaccinationData
-    .filter((data) => data.perDayCompleted !== null)
-    .reduce((acc, current) => acc + current.perDayCompleted, 0);
+const totalPercentageVaccinatedCompleted = helper.getTotalPercentageVaccinatedCompleted();
 
-const totalPercentageVaccinated =
-    vaccinationData[vaccinationData.length - 1].percentageTotal;
-
-const totalPercentageVaccinatedCompleted =
-    vaccinationData[vaccinationData.length - 1].percentageTotalCompleted;
+const totalNumberOfVaccinated = helper.getTotalNumberOfVaccinated();
 
 totalVaccinatedElement.innerHTML = totalNumberOfVaccinated.toLocaleString(
     language
 );
 
-totalVaccinatedCompletedElement.innerHTML = totalNumberOfVaccinatedCompleted.toLocaleString(
-    language
-);
+totalVaccinatedCompletedElement.innerHTML = helper.getTotalNumberOfVaccinatedCompleted();
 
 totalVaccinatedPercentageCompletedElement.innerHTML = totalPercentageVaccinatedCompleted.toLocaleString(
     language,

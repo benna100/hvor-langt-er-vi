@@ -7,7 +7,7 @@ const viewportWidth = Math.max(
     window.innerWidth || 0
 );
 
-const language = helper.getDanguage();
+const language = helper.getLanguage();
 
 const dates = vaccinationData.map((day) => day.date);
 

@@ -11,7 +11,7 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
         "data": "node src/get-newest-vaccination-data.js",
-	"data-deploy": "git pull && npm run data && npm run deploy && git add . && git commit -m \"added newest data\" && git push origin master"
+        "data-deploy": "git pull && npm run data && npm run deploy && git add . && git commit -m \"added newest data\" && git push origin master && node tweet-vaccination.js"
     },
     "repository": {
         "type": "git",
@@ -59,10 +59,12 @@
     "dependencies": {
         "chart.js": "^2.9.4",
         "copy-webpack-plugin": "^7.0.0",
+        "dotenv": "^8.2.0",
         "got": "^11.8.1",
         "jsdom": "^16.4.0",
         "node-gyp": "^7.1.2",
         "node-wget-promise": "^0.1.6",
-        "pdf2table": "0.0.2"
+        "pdf2table": "0.0.2",
+        "twitter": "^1.7.1"
     }
 }

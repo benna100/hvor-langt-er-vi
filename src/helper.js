@@ -1,3 +1,5 @@
+import vaccinationData from "./data/vaccination.json";
+
 function isMobileDevice() {
     let check = false;
     (function (a) {
@@ -59,6 +61,42 @@ function getFormattedDate(date, language) {
     test;
 }
 
-const getDanguage = () => (location.href.includes("english") ? "en" : "da");
+const getLanguage = () => (location.href.includes("english") ? "en" : "da");
 
-export default { isMobileDevice, getTotalDanes, getFormattedDate, getDanguage };
+const language = getLanguage();
+
+const getLastVaccinationDate = () => {
+    const [day, month, year] = vaccinationData[
+        vaccinationData.length - 1
+    ].date.split("-");
+    const lastVaccinationDate = new Date(`${year}-${month}-${day}`);
+    return getFormattedDate(lastVaccinationDate, language);
+};
+
+const getTotalNumberOfVaccinated = () => {
+    return vaccinationData.reduce((acc, current) => acc + current.perDay, 0);
+};
+const getTotalNumberOfVaccinatedCompleted = () => {
+    return vaccinationData
+        .filter((data) => data.perDayCompleted !== null)
+        .reduce((acc, current) => acc + current.perDayCompleted, 0)
+        .toLocaleString(language);
+};
+
+const getTotalPercentageVaccinated = () =>
+    vaccinationData[vaccinationData.length - 1].percentageTotal;
+
+const getTotalPercentageVaccinatedCompleted = () =>
+    vaccinationData[vaccinationData.length - 1].percentageTotalCompleted;
+
+export default {
+    isMobileDevice,
+    getTotalDanes,
+    getFormattedDate,
+    getLanguage,
+    getLastVaccinationDate,
+    getTotalNumberOfVaccinated,
+    getTotalNumberOfVaccinatedCompleted,
+    getTotalPercentageVaccinated,
+    getTotalPercentageVaccinatedCompleted,
+};
