@@ -1,0 +1,107 @@
+started 1
+Agent pid 23075
+Identity added: /home/pi/.ssh/id_ed25519 (benjamin.dals.hughes@gmail.com)
+256 SHA256:GmIJ2eex65tvtHRp/iSr+W5BddOuf2wPX+Bwf47vYHw benjamin.dals.hughes@gmail.com (ED25519)
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 data-deploy /home/pi/projects/hvor-langt-er-vi
+> git pull && npm run data && npm run deploy && git add . && git commit -m "added newest data" && git push origin master && node tweet-vaccination.js
+
+From github.com:benna100/hvor-langt-er-vi
+   25d1e2a..e5333ce  master     -> origin/master
+   5363449..bd0906c  gh-pages   -> origin/gh-pages
+Updating 25d1e2a..e5333ce
+Fast-forward
+ english.html                       | 6 +++---
+ index.html                         | 4 ++--
+ src/get-newest-vaccination-data.js | 6 +++++-
+ 3 files changed, 10 insertions(+), 6 deletions(-)
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 data /home/pi/projects/hvor-langt-er-vi
+> node src/get-newest-vaccination-data.js
+
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 predeploy /home/pi/projects/hvor-langt-er-vi
+> npm run build
+
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 build /home/pi/projects/hvor-langt-er-vi
+> webpack --config webpack.prod.js --mode production
+
+clean-webpack-plugin: /home/pi/projects/hvor-langt-er-vi/dist has been removed.
+(node:23152) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+Hash: c212893f0a2918ef109e
+Version: webpack 4.46.0
+Time: 46917ms
+Built at: 03/02/2021 10:49:28 pm
+                              Asset      Size  Chunks                                Chunk Names
+                              CNAME  16 bytes          [emitted]                     
+                       english.html  7.25 KiB          [emitted]                     
+                        favicon.png  57.8 KiB          [emitted]                     
+                         index.html  7.28 KiB          [emitted]                     
+       main.c212893f0a2918ef109e.js   479 KiB       0  [emitted] [immutable]  [big]  main
+   main.c212893f0a2918ef109e.js.map   524 KiB       0  [emitted] [dev]               main
+    styles.275aff939bd8d0922054.css  5.09 KiB       0  [emitted]                     main
+styles.275aff939bd8d0922054.css.map  29.3 KiB          [emitted]                     
+Entrypoint main [big] = main.c212893f0a2918ef109e.js styles.275aff939bd8d0922054.css main.c212893f0a2918ef109e.js.map
+  [1] ./src/data/vaccination.json 4.33 KiB {0} [built]
+  [2] ./src/helper.js 5.67 KiB {0} [built]
+[138] ./src/index.js 7.46 KiB {0} [built]
+[139] ./src/chart.js 10.2 KiB {0} [built]
+[141] (webpack)/buildin/module.js 497 bytes {0} [built]
+[142] ./node_modules/moment/locale sync ^\.\/.*$ 3.21 KiB {0} [optional] [built]
+[143] ./src/main.scss 41 bytes [built]
+[144] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB [built]
+    + 140 hidden modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  main.c212893f0a2918ef109e.js (479 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (484 KiB)
+      main.c212893f0a2918ef109e.js
+      styles.275aff939bd8d0922054.css
+
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--5-2!node_modules/postcss-loader/lib/index.js??ref--5-3!node_modules/sass-loader/lib/loader.js??ref--5-4!src/main.scss:
+    Entrypoint undefined = extract-text-webpack-plugin-output-filename
+    [0] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB {0} [built]
+        + 1 hidden module
+Child html-webpack-plugin for "english.html":
+     1 asset
+    Entrypoint undefined = english.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./english.html 6.29 KiB {0} [built]
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./index.html 6.32 KiB {0} [built]
+
+> @2.0.0 deploy /home/pi/projects/hvor-langt-er-vi
+> gh-pages -d dist
+
+Published
