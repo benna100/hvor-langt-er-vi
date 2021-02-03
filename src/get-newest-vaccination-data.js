@@ -57,7 +57,11 @@ got("https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning")
                             }
                         }
                     });
-                    exportJson(vaccinationData, "src/data/vaccination.json");
+                    if (vaccinationData.length > 0)
+                        exportJson(
+                            vaccinationData,
+                            "src/data/vaccination.json"
+                        );
                 });
             });
         });
