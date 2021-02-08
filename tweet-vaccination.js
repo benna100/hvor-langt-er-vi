@@ -36,6 +36,14 @@ const getTotalPercentageVaccinatedCompleted = () =>
         minimumFractionDigits: 2,
     });
 
+const vaccinatedToday = vaccinationData[
+    vaccinationData.length - 1
+].perDay.toLocaleString(language);
+
+const vaccinatedCompletedToday = vaccinationData[
+    vaccinationData.length - 1
+].perDayCompleted.toLocaleString(language);
+
 var client = new Twitter({
     consumer_key: process.env.consumer_key,
     consumer_secret: process.env.consumer_secret,
@@ -43,11 +51,11 @@ var client = new Twitter({
     access_token_secret: process.env.access_token_secret,
 });
 
-const tweetText = `Vi har færdigvaccineret ${getTotalNumberOfVaccinatedCompleted()} (${getTotalPercentageVaccinatedCompleted()}%)
+const tweetText = `Vi har idag færdigvaccineret ${vaccinatedCompletedToday}. I alt er vi oppe på ${getTotalNumberOfVaccinatedCompleted()} (${getTotalPercentageVaccinatedCompleted()}%)
 
-Vi har påbegyndt vaccination for ${getTotalNumberOfVaccinated()} (${getTotalPercentageVaccinated()}%)
+Vi har påbegyndt vaccination for ${vaccinatedToday}. I alt er vi oppe på ${getTotalNumberOfVaccinated()} (${getTotalPercentageVaccinated()}%)
 
-For mere info tjek 👇 #COVID19dk #dkpol #sundpol https://hvorlangtervi.dk/
+For mere info tjek 👇 #COVID19dk #dkpol #sundpol #dkpol #dkmedier https://hvorlangtervi.dk/
 `;
 
 client
