@@ -41,7 +41,9 @@ main {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     color: #1d2d35;
 }
 
@@ -63,7 +65,8 @@ h2 {
     margin-bottom: 12px;
 }
 
-h3 {
+h3,
+h4 {
     font-size: 1.3rem;
     line-height: 2.3rem;
     margin-bottom: 36px;
