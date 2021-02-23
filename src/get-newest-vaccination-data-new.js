@@ -57,16 +57,18 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                         // {"date":"20-02-2021","perDay":10515,"percentageTotal":5.32,"perDayCompleted":576,"percentageTotalCompleted":3.01}
                         console.log(row);
 
-                        const date = fileName.split("-")[2];
-                        const formattedDate = `${date.slice(0, 2)}-${date.slice(
+                        let date = fileName.split("-")[2];
+                        date = `${date.slice(0, 2)}-${date.slice(
                             2,
                             4
                         )}-${date.slice(4, 8)}`;
 
-                        const percentageTotal =
-                            row["Vacc.d�kning foerste vacc. (%)"];
-                        const percentageTotalCompleted =
-                            row["Vacc.d�kning faerdigvacc. (%)"];
+                        const percentageTotal = parseFloat(
+                            row["Vacc.d�kning foerste vacc. (%)"]
+                        );
+                        const percentageTotalCompleted = parseFloat(
+                            row["Vacc.d�kning faerdigvacc. (%)"]
+                        );
 
                         const vaccinatedTotalToday = row["Antal f�rste vacc."];
                         const vaccinatedTotalCompletedToday =
@@ -84,6 +86,19 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                             percentageTotalCompleted,
                             perDay,
                             perDayCompleted
+                        );
+
+                        vaccinationData.push({
+                            date,
+                            perDay,
+                            percentageTotal,
+                            perDayCompleted,
+                            percentageTotalCompleted,
+                        });
+
+                        exportJson(
+                            vaccinationData,
+                            "src/data/vaccination.json"
                         );
                     })
                     .on("end", () => {
