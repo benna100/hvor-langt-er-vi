@@ -23,6 +23,8 @@ got("https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning")
                     if (err) return console.log(err);
                     const vaccinationData = [];
                     rows.forEach((row) => {
+                        console.log(row);
+                        console.log(row.length);
                         if (row.length === 7) {
                             const matchDateRegex = /\d{2}-\d{2}-\d{4}/;
                             const isStringADate = matchDateRegex.test(row[0]);
@@ -57,6 +59,7 @@ got("https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning")
                             }
                         }
                     });
+                    console.log(vaccinationData.length);
                     if (vaccinationData.length > 0)
                         exportJson(
                             vaccinationData,
