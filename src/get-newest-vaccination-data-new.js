@@ -28,7 +28,7 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                 );
 
                 fs.createReadStream(
-                    "src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationsdaekning_nationalt.csv"
+                    "src/data/vaccination/Vaccine_DB/Vaccinationsdaekning_nationalt.csv"
                 )
                     .pipe(csv())
                     .on("data", (row) => {
@@ -45,34 +45,48 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                             0
                         );
 
-                        console.log(yesterdaysTotalPerDay);
+                        // console.log(yesterdaysTotalPerDay);
 
                         const yesterdaysTotalPerDayCompleted = vaccinationData.reduce(
                             (acc, current) => acc + current.perDayCompleted,
                             0
                         );
 
-                        console.log(yesterdaysTotalPerDayCompleted);
+                        let dateString = fileName.split("-")[2];
+                        const year = dateString.slice(4, 8);
+                        const month = dateString.slice(2, 4);
+                        const day = dateString.slice(0, 2);
+                        const entryDate = new Date(`${year}-${month}-${day}`);
 
-                        // {"date":"20-02-2021","perDay":10515,"percentageTotal":5.32,"perDayCompleted":576,"percentageTotalCompleted":3.01}
-                        console.log(row);
+                        const yesterdaysDate = new Date(
+                            entryDate.getTime() - 24 * 60 * 60 * 1000
+                        );
 
-                        let date = fileName.split("-")[2];
-                        date = `${date.slice(0, 2)}-${date.slice(
-                            2,
-                            4
-                        )}-${date.slice(4, 8)}`;
+                        let dateMonth = yesterdaysDate.getMonth() + 1;
+                        if (dateMonth < 10) {
+                            dateMonth = `0${dateMonth}`;
+                        }
+
+                        let dateDay = yesterdaysDate.getDate();
+                        if (dateDay < 10) {
+                            dateDay = `0${dateDay}`;
+                        }
+                        const date = `${dateDay}-${dateMonth}-${yesterdaysDate.getFullYear()}`;
 
                         const percentageTotal = parseFloat(
-                            row["Vacc.d�kning foerste vacc. (%)"]
+                            row["Vacc.d�kning p�begyndt vacc. (%)"]
                         );
+
                         const percentageTotalCompleted = parseFloat(
                             row["Vacc.d�kning faerdigvacc. (%)"]
                         );
 
-                        const vaccinatedTotalToday = row["Antal f�rste vacc."];
-                        const vaccinatedTotalCompletedToday =
-                            row["Antal faerdigvacc."];
+                        const vaccinatedTotalToday = parseInt(
+                            row["Antal f�rste vacc."]
+                        );
+                        const vaccinatedTotalCompletedToday = parseInt(
+                            row["Antal faerdigvacc."]
+                        );
 
                         const perDay =
                             vaccinatedTotalToday - yesterdaysTotalPerDay;
