@@ -3751,3 +3751,348 @@ Child html-webpack-plugin for "index.html":
 > gh-pages -d dist
 
 Published
+[master 76a04eb] added newest data
+ 2 files changed, 181 insertions(+)
+ create mode 100644 vaccinationstilslutning-23022021-777a
+remote: 
+remote: GitHub found 5 vulnerabilities on benna100/hvor-langt-er-vi's default branch (1 high, 3 moderate, 1 low). To find out more, visit:        
+remote:      https://github.com/benna100/hvor-langt-er-vi/security/dependabot        
+remote: 
+To github.com:benna100/hvor-langt-er-vi.git
+   d73016b..76a04eb  master -> master
+{ created_at: 'Tue Feb 23 13:12:57 +0000 2021',
+  id: 1364201581965631500,
+  id_str: '1364201581965631490',
+  text:
+   'Vi har idag færdigvaccineret 576. I alt er vi oppe på 175.195 (3,01%)\n\nVi har påbegyndt vaccination for 10.515. I a… https://t.co/PYIkEMNPH4',
+  truncated: true,
+  entities:
+   { hashtags: [],
+     symbols: [],
+     user_mentions: [],
+     urls: [ [Object] ] },
+  source: '',
+  in_reply_to_status_id: null,
+  in_reply_to_status_id_str: null,
+  in_reply_to_user_id: null,
+  in_reply_to_user_id_str: null,
+  in_reply_to_screen_name: null,
+  user:
+   { id: 1355970439009472500,
+     id_str: '1355970439009472513',
+     name: 'Daglige Vaccine Updates',
+     screen_name: 'DagligeU',
+     location: '',
+     description: 'Følg for at få daglige vaccine updates 💉🇩🇰',
+     url: null,
+     entities: { description: [Object] },
+     protected: false,
+     followers_count: 3,
+     friends_count: 0,
+     listed_count: 0,
+     created_at: 'Sun Jan 31 20:05:28 +0000 2021',
+     favourites_count: 0,
+     utc_offset: null,
+     time_zone: null,
+     geo_enabled: false,
+     verified: false,
+     statuses_count: 25,
+     lang: null,
+     contributors_enabled: false,
+     is_translator: false,
+     is_translation_enabled: false,
+     profile_background_color: 'F5F8FA',
+     profile_background_image_url: null,
+     profile_background_image_url_https: null,
+     profile_background_tile: false,
+     profile_image_url:
+      'http://pbs.twimg.com/profile_images/1355972979478441985/jHrVWzRK_normal.jpg',
+     profile_image_url_https:
+      'https://pbs.twimg.com/profile_images/1355972979478441985/jHrVWzRK_normal.jpg',
+     profile_link_color: '1DA1F2',
+     profile_sidebar_border_color: 'C0DEED',
+     profile_sidebar_fill_color: 'DDEEF6',
+     profile_text_color: '333333',
+     profile_use_background_image: true,
+     has_extended_profile: true,
+     default_profile: true,
+     default_profile_image: false,
+     following: false,
+     follow_request_sent: false,
+     notifications: false,
+     translator_type: 'none' },
+  geo: null,
+  coordinates: null,
+  place: null,
+  contributors: null,
+  is_quote_status: false,
+  retweet_count: 0,
+  favorite_count: 0,
+  favorited: false,
+  retweeted: false,
+  possibly_sensitive: false,
+  lang: 'da' }
+finisehd
+started 1
+Agent pid 14079
+Identity added: /home/pi/.ssh/id_ed25519 (benjamin.dals.hughes@gmail.com)
+256 SHA256:GmIJ2eex65tvtHRp/iSr+W5BddOuf2wPX+Bwf47vYHw benjamin.dals.hughes@gmail.com (ED25519)
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 data-deploy /home/pi/projects/hvor-langt-er-vi
+> git pull && npm run data && npm run deploy && git add . && git commit -m "added newest data" && git push origin master && node tweet-vaccination.js
+
+From github.com:benna100/hvor-langt-er-vi
+   76a04eb..d6f8b1a  master     -> origin/master
+   757f050..f70ec94  gh-pages   -> origin/gh-pages
+Updating 76a04eb..d6f8b1a
+Fast-forward
+ covid19-vaccinationsdata-23022021-gg78.zip         |  Bin 0 -> 62082 bytes
+ package-lock.json                                  | 6182 ++++++++++----------
+ package.json                                       |    8 +-
+ src/data/vaccination.json                          |    2 +-
+ .../Vaccine_DB/0_readme_fil_vaccinationsDB.txt     |  129 +
+ .../Vaccine_DB/FaerdigVacc_kommune_dag.csv         | 2909 +++++++++
+ .../Vaccine_DB/FaerdigVacc_region_dag.csv          |  185 +
+ .../Vaccine_DB/FoersteVacc_kommune_dag.csv         | 4523 ++++++++++++++
+ .../Vaccine_DB/FoersteVacc_region_dag.csv          |  289 +
+ .../Vaccine_DB/Noegletal_kommunale_daily.csv       |  197 +
+ .../Vaccine_DB/Noegletal_regionale_daily.csv       |   11 +
+ .../Vaccine_DB/Vaccinationer_kommuner_befolk.csv   |   99 +
+ .../Vaccinationer_region_aldgrp_koen.csv           |  101 +
+ .../Vaccine_DB/Vaccinationer_regioner_befolk.csv   |    6 +
+ .../Vaccinations_Daekning_region_pr_dag.csv        |  235 +
+ .../Vaccine_DB/Vaccinationsdaekning_kommune.csv    |   99 +
+ .../Vaccine_DB/Vaccinationsdaekning_nationalt.csv  |    2 +
+ .../Vaccine_DB/Vaccinationsdaekning_region.csv     |    6 +
+ .../Vaccine_DB/Vaccinationstyper_regioner.csv      |   16 +
+ src/get-newest-vaccination-data-new.js             |  117 +
+ src/get-newest-vaccination-data.js                 |    3 +
+ ...j7 => vaccinationstilslutning-20022021-d1j7.pdf |  Bin
+ vaccinationstilslutning-23022021-777a.pdf          |  Bin 0 -> 695550 bytes
+ 23 files changed, 12091 insertions(+), 3028 deletions(-)
+ create mode 100644 covid19-vaccinationsdata-23022021-gg78.zip
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/0_readme_fil_vaccinationsDB.txt
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/FaerdigVacc_kommune_dag.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/FaerdigVacc_region_dag.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/FoersteVacc_kommune_dag.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/FoersteVacc_region_dag.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Noegletal_kommunale_daily.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Noegletal_regionale_daily.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationer_kommuner_befolk.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationer_region_aldgrp_koen.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationer_regioner_befolk.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinations_Daekning_region_pr_dag.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationsdaekning_kommune.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationsdaekning_nationalt.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationsdaekning_region.csv
+ create mode 100644 src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationstyper_regioner.csv
+ create mode 100644 src/get-newest-vaccination-data-new.js
+ rename vaccinationstilslutning-20022021-d1j7 => vaccinationstilslutning-20022021-d1j7.pdf (100%)
+ create mode 100644 vaccinationstilslutning-23022021-777a.pdf
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 data /home/pi/projects/hvor-langt-er-vi
+> node src/get-newest-vaccination-data-new.js
+
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'unzipper'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/pi/projects/hvor-langt-er-vi/src/get-newest-vaccination-data-new.js:6:18)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @2.0.0 data: `node src/get-newest-vaccination-data-new.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @2.0.0 data script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/pi/.npm/_logs/2021-02-24T13_10_39_116Z-debug.log
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @2.0.0 data-deploy: `git pull && npm run data && npm run deploy && git add . && git commit -m "added newest data" && git push origin master && node tweet-vaccination.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @2.0.0 data-deploy script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/pi/.npm/_logs/2021-02-24T13_10_39_292Z-debug.log
+finisehd
+started 1
+Agent pid 19964
+Identity added: /home/pi/.ssh/id_ed25519 (benjamin.dals.hughes@gmail.com)
+256 SHA256:GmIJ2eex65tvtHRp/iSr+W5BddOuf2wPX+Bwf47vYHw benjamin.dals.hughes@gmail.com (ED25519)
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 data-deploy /home/pi/projects/hvor-langt-er-vi
+> git pull && npm install && npm run data && npm run deploy && git add . && git commit -m "added newest data" && git push origin master
+
+From github.com:benna100/hvor-langt-er-vi
+   d6f8b1a..d7e2108  master     -> origin/master
+   f70ec94..604891f  gh-pages   -> origin/gh-pages
+Updating d6f8b1a..d7e2108
+Fast-forward
+ covid19-vaccinationsdata-24022021-54xc.zip         |  Bin 0 -> 62039 bytes
+ package.json                                       |    2 +-
+ src/data/vaccination.json                          |    2 +-
+ .../Vaccine_DB/0_readme_fil_vaccinationsDB.txt     |  141 +
+ .../Vaccine_DB/FaerdigVacc_kommune_dag.csv         | 2994 +++++++++++++
+ .../Vaccine_DB/FaerdigVacc_region_dag.csv          |  190 +
+ .../Vaccine_DB/FoersteVacc_kommune_dag.csv         | 4620 ++++++++++++++++++++
+ .../Vaccine_DB/FoersteVacc_region_dag.csv          |  294 ++
+ .../Vaccine_DB/Noegletal_kommunale_daily.csv       |  197 +
+ .../Vaccine_DB/Noegletal_regionale_daily.csv       |   11 +
+ .../Vaccine_DB/Vaccinationer_kommuner_befolk.csv   |   99 +
+ .../Vaccinationer_region_aldgrp_koen.csv           |  101 +
+ .../Vaccine_DB/Vaccinationer_regioner_befolk.csv   |    6 +
+ .../Vaccinations_Daekning_region_pr_dag.csv        |  241 +
+ .../Vaccine_DB/Vaccinationsdaekning_kommune.csv    |   99 +
+ .../Vaccine_DB/Vaccinationsdaekning_nationalt.csv  |    2 +
+ .../Vaccine_DB/Vaccinationsdaekning_region.csv     |    6 +
+ .../Vaccine_DB/Vaccinationstyper_regioner.csv      |   16 +
+ src/get-newest-vaccination-data-new.js             |   42 +-
+ 19 files changed, 9047 insertions(+), 16 deletions(-)
+ create mode 100644 covid19-vaccinationsdata-24022021-54xc.zip
+ create mode 100644 src/data/vaccination/Vaccine_DB/0_readme_fil_vaccinationsDB.txt
+ create mode 100644 src/data/vaccination/Vaccine_DB/FaerdigVacc_kommune_dag.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/FaerdigVacc_region_dag.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/FoersteVacc_kommune_dag.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/FoersteVacc_region_dag.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Noegletal_kommunale_daily.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Noegletal_regionale_daily.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Vaccinationer_kommuner_befolk.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Vaccinationer_region_aldgrp_koen.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Vaccinationer_regioner_befolk.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Vaccinations_Daekning_region_pr_dag.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Vaccinationsdaekning_kommune.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Vaccinationsdaekning_nationalt.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Vaccinationsdaekning_region.csv
+ create mode 100644 src/data/vaccination/Vaccine_DB/Vaccinationstyper_regioner.csv
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+npm WARN copy-webpack-plugin@7.0.0 requires a peer of webpack@^5.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN jsdom@16.4.0 requires a peer of canvas@^2.5.0 but none is installed. You must install peer dependencies yourself.
+npm WARN ws@7.4.2 requires a peer of bufferutil@^4.0.1 but none is installed. You must install peer dependencies yourself.
+npm WARN ws@7.4.2 requires a peer of utf-8-validate@^5.0.2 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.1 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"arm"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"arm"})
+
+added 17 packages from 12 contributors in 172.253s
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 data /home/pi/projects/hvor-langt-er-vi
+> node src/get-newest-vaccination-data-new.js
+
+File Renamed.
+24-02-2021 6 3.1 0 0
+CSV file successfully processed
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 predeploy /home/pi/projects/hvor-langt-er-vi
+> npm run build
+
+npm WARN npm npm does not support Node.js v10.23.1
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @2.0.0 build /home/pi/projects/hvor-langt-er-vi
+> webpack --config webpack.prod.js --mode production
+
+clean-webpack-plugin: /home/pi/projects/hvor-langt-er-vi/dist has been removed.
+(node:20079) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+Hash: ab94f0843f0ef9f5af40
+Version: webpack 4.46.0
+Time: 132940ms
+Built at: 25/02/2021 2:16:47 pm
+                              Asset      Size  Chunks                                Chunk Names
+                              CNAME  16 bytes          [emitted]                     
+                       english.html  7.16 KiB          [emitted]                     
+                        favicon.png  57.8 KiB          [emitted]                     
+                         index.html  7.18 KiB          [emitted]                     
+       main.ab94f0843f0ef9f5af40.js   481 KiB       0  [emitted] [immutable]  [big]  main
+   main.ab94f0843f0ef9f5af40.js.map  1.69 MiB       0  [emitted] [dev]               main
+    styles.0cca1ad490c224c2db71.css  5.11 KiB       0  [emitted]                     main
+styles.0cca1ad490c224c2db71.css.map  29.3 KiB          [emitted]                     
+Entrypoint main [big] = main.ab94f0843f0ef9f5af40.js styles.0cca1ad490c224c2db71.css main.ab94f0843f0ef9f5af40.js.map
+  [1] ./src/data/vaccination.json 6.65 KiB {0} [built]
+  [2] ./src/helper.js 5.67 KiB {0} [built]
+[138] ./src/index.js 7.46 KiB {0} [built]
+[139] ./src/chart.js 10.2 KiB {0} [built]
+[141] (webpack)/buildin/module.js 497 bytes {0} [built]
+[142] ./node_modules/moment/locale sync ^\.\/.*$ 3.21 KiB {0} [optional] [built]
+[143] ./src/main.scss 41 bytes [built]
+[144] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB [built]
+    + 140 hidden modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  main.ab94f0843f0ef9f5af40.js (481 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (487 KiB)
+      main.ab94f0843f0ef9f5af40.js
+      styles.0cca1ad490c224c2db71.css
+
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--5-2!node_modules/postcss-loader/lib/index.js??ref--5-3!node_modules/sass-loader/lib/loader.js??ref--5-4!src/main.scss:
+    Entrypoint undefined = extract-text-webpack-plugin-output-filename
+    [0] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB {0} [built]
+        + 1 hidden module
+Child html-webpack-plugin for "english.html":
+     1 asset
+    Entrypoint undefined = english.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./english.html 6.19 KiB {0} [built]
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./index.html 6.22 KiB {0} [built]
+
+> @2.0.0 deploy /home/pi/projects/hvor-langt-er-vi
+> gh-pages -d dist
+
+Published
