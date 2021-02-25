@@ -38,27 +38,39 @@ Faerdigvaccineret difference: Færdigvacc. i dag - Færdigvacc. igaar.
 
 ------------------------------------------------------
 
-Fil 2a: Vaccinationer_region_dag:
+Fil 2a: FoersteVacc_region_dag:
 
 Regionsnavn: Region.
 Første vacc. dato: Dato for første vaccination.
-Faerdigvacc. dato: Dato for færdigvaccination.
 Antal første vacc.: Antal første vaccinationer administreret.
-antal faerdigvacc.: Antal færdigvaccinationer administreret. 
 
 ------------------------------------------------------
 
-Fil 2b: Vaccinationer_kommune_dag:
+Fil 2b: FoersteVacc_kommune_dag:
 
 Kommunenavn: Kommune
 Første vacc. dato: Dato for første vaccination.
-Faerdigvacc. dato: Dato for færdigvaccination.
 Antal første vacc.: Antal første vaccinationer administreret.
+
+------------------------------------------------------
+
+Fil 3a: FaerdigVacc_region_dag:
+
+Regionsnavn: Region.
+Faerdigvacc. dato: Dato for færdigvaccination.
 Antal faerdigvacc.: Antal færdigvaccinationer administreret. 
 
 ------------------------------------------------------
 
-Fil 3a: Vaccinationer_regioner_befolk:
+Fil 3b: FaerdigVacc_kommune_dag:
+
+Kommunenavn: Kommune
+Faerdigvacc. dato: Dato for færdigvaccination.
+Antal faerdigvacc.: Antal færdigvaccinationer administreret. 
+
+------------------------------------------------------
+
+Fil 4a: Vaccinationer_regioner_befolk:
 
 Regionsnavn: Region.
 Antal første vacc. personer: Antal første vaccinerede personer.
@@ -67,7 +79,7 @@ Antal borgere:
 
 ------------------------------------------------------
 
-Fil 3b: Vaccinationer_kommuner_befolk:
+Fil 4b: Vaccinationer_kommuner_befolk:
 
 Kommunenavn: Kommune.
 Antal første vacc. personer: Antal første vaccinerede personer.
@@ -76,7 +88,7 @@ Antal borgere:
 
 ------------------------------------------------------
 
-Fil 4a: Vaccinationsdaekning_region:
+Fil 5a: Vaccinationsdaekning_region:
 
 Regionsnavn: Region.
 Antal første vacc. personer: Antal første vaccinerede personer.
@@ -87,7 +99,7 @@ Vacc.dækning faerdigvacc. (%): (antal faerdigvacc. personer / antal borgere) x 
 
 ------------------------------------------------------
 
-Fil 4b: Vaccinationsdaekning_kommune:
+Fil 5b: Vaccinationsdaekning_kommune:
 
 Kommunenavn: Kommune.
 Antal første vacc. personer: Antal første vaccinerede personer.
@@ -98,7 +110,7 @@ Vacc.dækning faerdigvacc. (%): (antal faerdigvacc. personer / antal borgere) x 
 
 ------------------------------------------------------
 
-Fil 5a: Vaccinations_Daekning_region_pr_dag:
+Fil 6a: Vaccinations_Daekning_region_pr_dag:
 
 Regionsnavn: Region.
 Vaccinedato: Dato for administreret vaccine.
@@ -108,7 +120,7 @@ Vacc.dækning (%): (Kumulerede antal faerdigvacc. / antal borgere) x 100
 
 ------------------------------------------------------
 
-Fil 6a: Vaccinations_Daekning_region_pr_dag:
+Fil 7a: Vaccinations_Daekning_region_pr_dag:
 
 Regionsnavn: Region.
 Aldersgruppe: 0-9, 10-19, 20-29, 30-39, 40-49, 50-59, 60-69, 70-79, 80-89, 90+
@@ -118,7 +130,7 @@ antal faerdigvacc.: Antal færdigvaccinationer administreret.
 
 ------------------------------------------------------
 
-Fil 7a: Vaccinationstyper_regioner:
+Fil 8a: Vaccinationstyper_regioner:
 
 Vaccinenavn: Navn på administrede vaccinetyper. 
 Regionsnavn: Region.
