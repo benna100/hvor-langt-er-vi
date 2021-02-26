@@ -1,5 +1,6 @@
 var pdf2table = require("pdf2table");
 var fs = require("fs");
+const path = require("path");
 var wget = require("node-wget-promise");
 const got = require("got");
 const jsdom = require("jsdom");
@@ -29,11 +30,23 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                     .then(
                         () => {
                             console.log("finish");
-                            fs.createReadStream(
-                                "./src/data/vaccination/ArcGIS_dashboards_data/Vaccine_DB/Vaccinationsdaekning_nationalt.csv"
+
+                            let nationalVaccinationFile = getAllFiles(
+                                "./src/data/vaccination"
                             )
+                                .find((file) =>
+                                    file.includes(
+                                        "Vaccinationsdaekning_nationalt"
+                                    )
+                                )
+                                .replace(`\\src`, "");
+
+                            console.log(nationalVaccinationFile);
+
+                            fs.createReadStream(nationalVaccinationFile)
                                 .pipe(csv())
                                 .on("data", (row) => {
+                                    console.log(row);
                                     var vaccinationDataUnformatted = fs.readFileSync(
                                         "src/data/vaccination.json"
                                     );
@@ -113,6 +126,19 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                                     console.log(
                                         "CSV file successfully processed"
                                     );
+                                    fs.rmdir(
+                                        "./src/data/vaccination",
+                                        { recursive: true },
+                                        (err) => {
+                                            if (err) {
+                                                throw err;
+                                            }
+
+                                            console.log(
+                                                `./src/vaccination is deleted!`
+                                            );
+                                        }
+                                    );
                                 });
                         },
                         (e) => {
@@ -129,4 +155,24 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
 function exportJson(jsonToExport, filename) {
     let data = JSON.stringify(jsonToExport);
     fs.writeFileSync(filename, data);
+}
+
+const getAllFiles = function (dirPath, arrayOfFiles) {
+    files = fs.readdirSync(dirPath);
+
+    arrayOfFiles = arrayOfFiles || [];
+
+    files.forEach(function (file) {
+        if (fs.statSync(dirPath + "/" + file).isDirectory()) {
+            arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles);
+        } else {
+            arrayOfFiles.push(path.join(__dirname, dirPath, "/", file));
+        }
+    });
+
+    return arrayOfFiles;
+};
+
+function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(find, "g"), replace);
 }
