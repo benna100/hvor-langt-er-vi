@@ -39,7 +39,7 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                                         "Vaccinationsdaekning_nationalt"
                                     )
                                 )
-                                .replace(`\\src`, "");
+                                .replace(`/src`, "");
 
                             console.log(nationalVaccinationFile);
 
