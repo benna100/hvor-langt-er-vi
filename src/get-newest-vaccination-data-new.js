@@ -39,7 +39,7 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                                         "Vaccinationsdaekning_nationalt"
                                     )
                                 )
-                                .replace(`/src`, "");
+                                .replace(`\\src`, "");
 
                             console.log(nationalVaccinationFile);
 
@@ -127,7 +127,7 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                                         "CSV file successfully processed"
                                     );
                                     fs.rmdir(
-                                        "./src/data/vaccination",
+                                        "src/data/vaccination",
                                         { recursive: true },
                                         (err) => {
                                             if (err) {
