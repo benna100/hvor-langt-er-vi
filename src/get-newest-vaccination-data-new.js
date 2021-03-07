@@ -8,6 +8,9 @@ const unzipper = require("unzipper");
 const csv = require("csv-parser");
 const { JSDOM } = jsdom;
 
+console.log("Current path: " + process.cwd());
+console.log("Current dirname: " + __dirname);
+
 got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
     .then((response) => {
         const dom = new JSDOM(response.body);
