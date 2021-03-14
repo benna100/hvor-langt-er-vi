@@ -8,6 +8,8 @@ const unzipper = require("unzipper");
 const csv = require("csv-parser");
 const { JSDOM } = jsdom;
 
+console.log("start --------------------------------------");
+console.log(new Date());
 console.log("Current path: " + process.cwd());
 console.log("Current dirname: " + __dirname);
 
@@ -179,3 +181,6 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
 function replaceAll(str, find, replace) {
     return str.replace(new RegExp(find, "g"), replace);
 }
+
+
+console.log("end -------------------------------------------------------------------------")
