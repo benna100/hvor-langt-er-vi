@@ -98,3 +98,84 @@ Child html-webpack-plugin for "index.html":
 > gh-pages -d dist
 
 Published
+[master 50860dd] added newest data
+ 4 files changed, 103 insertions(+), 1 deletion(-)
+ create mode 100644 covid19-vaccinationsdata-16032021-2mat.zip
+ create mode 100644 newest-log
+remote: 
+remote: GitHub found 7 vulnerabilities on benna100/hvor-langt-er-vi's default branch (1 high, 4 moderate, 2 low). To find out more, visit:        
+remote:      https://github.com/benna100/hvor-langt-er-vi/security/dependabot        
+remote: 
+To github.com:benna100/hvor-langt-er-vi.git
+   917825e..50860dd  master -> master
+{
+  created_at: 'Tue Mar 16 18:31:09 +0000 2021',
+  id: 1371891806561042400,
+  id_str: '1371891806561042436',
+  text: 'Vi har idag færdigvaccineret 9.867. I alt er vi oppe på 268.653 (4,60%)\n' +
+    '\n' +
+    'Vi har påbegyndt vaccination for 2.986. I… https://t.co/6T4MQ5VGY6',
+  truncated: true,
+  entities: { hashtags: [], symbols: [], user_mentions: [], urls: [ [Object] ] },
+  source: '',
+  in_reply_to_status_id: null,
+  in_reply_to_status_id_str: null,
+  in_reply_to_user_id: null,
+  in_reply_to_user_id_str: null,
+  in_reply_to_screen_name: null,
+  user: {
+    id: 1355970439009472500,
+    id_str: '1355970439009472513',
+    name: 'Daglige Vaccine Updates',
+    screen_name: 'DagligeU',
+    location: '',
+    description: 'Følg for at få daglige vaccine updates 💉🇩🇰',
+    url: null,
+    entities: { description: [Object] },
+    protected: false,
+    followers_count: 18,
+    friends_count: 1,
+    listed_count: 0,
+    created_at: 'Sun Jan 31 20:05:28 +0000 2021',
+    favourites_count: 0,
+    utc_offset: null,
+    time_zone: null,
+    geo_enabled: false,
+    verified: false,
+    statuses_count: 45,
+    lang: null,
+    contributors_enabled: false,
+    is_translator: false,
+    is_translation_enabled: false,
+    profile_background_color: 'F5F8FA',
+    profile_background_image_url: null,
+    profile_background_image_url_https: null,
+    profile_background_tile: false,
+    profile_image_url: 'http://pbs.twimg.com/profile_images/1355972979478441985/jHrVWzRK_normal.jpg',
+    profile_image_url_https: 'https://pbs.twimg.com/profile_images/1355972979478441985/jHrVWzRK_normal.jpg',
+    profile_link_color: '1DA1F2',
+    profile_sidebar_border_color: 'C0DEED',
+    profile_sidebar_fill_color: 'DDEEF6',
+    profile_text_color: '333333',
+    profile_use_background_image: true,
+    has_extended_profile: true,
+    default_profile: true,
+    default_profile_image: false,
+    following: false,
+    follow_request_sent: false,
+    notifications: false,
+    translator_type: 'none'
+  },
+  geo: null,
+  coordinates: null,
+  place: null,
+  contributors: null,
+  is_quote_status: false,
+  retweet_count: 0,
+  favorite_count: 0,
+  favorited: false,
+  retweeted: false,
+  possibly_sensitive: false,
+  lang: 'da'
+}
+finisehd
