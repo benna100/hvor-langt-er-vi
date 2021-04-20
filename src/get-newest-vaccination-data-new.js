@@ -69,7 +69,9 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                                             acc + current.perDayCompleted,
                                         0
                                     );
-                                    let dateString = fileName.split("-")[2];
+                                    let dateString = fileName
+                                        .split("covid19-")[1]
+                                        .split("-")[0];
                                     const year = dateString.slice(4, 8);
                                     const month = dateString.slice(2, 4);
                                     const day = dateString.slice(0, 2);
@@ -182,5 +184,6 @@ function replaceAll(str, find, replace) {
     return str.replace(new RegExp(find, "g"), replace);
 }
 
-
-console.log("end -------------------------------------------------------------------------")
+console.log(
+    "end -------------------------------------------------------------------------"
+);
