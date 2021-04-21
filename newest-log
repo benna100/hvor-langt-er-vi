@@ -6649,3 +6649,273 @@ Child html-webpack-plugin for "index.html":
 > gh-pages -d dist
 
 Published
+[master 71e9673] added newest data
+ 3 files changed, 183 insertions(+), 1 deletion(-)
+ create mode 100644 vaccinationsdata-dashboard-covid19-20042021-do91.zip
+remote: 
+remote: GitHub found 8 vulnerabilities on benna100/hvor-langt-er-vi's default branch (2 high, 4 moderate, 2 low). To find out more, visit:        
+remote:      https://github.com/benna100/hvor-langt-er-vi/security/dependabot        
+remote: 
+To github.com:benna100/hvor-langt-er-vi.git
+   f9d03d7..71e9673  master -> master
+{
+  created_at: 'Tue Apr 20 13:03:09 +0000 2021',
+  id: 1384492837425852400,
+  id_str: '1384492837425852419',
+  text: 'Vi har idag færdigvaccineret 14.479. I alt er vi oppe på 519.119 (8,90%)\n' +
+    '\n' +
+    'Vi har påbegyndt vaccination for 24.304.… https://t.co/ODYZaRZKYQ',
+  truncated: true,
+  entities: { hashtags: [], symbols: [], user_mentions: [], urls: [ [Object] ] },
+  source: '<a href="https://help.twitter.com/en/using-twitter/how-to-tweet#source-labels" rel="nofollow">Daglige Vaccine Updates</a>',
+  in_reply_to_status_id: null,
+  in_reply_to_status_id_str: null,
+  in_reply_to_user_id: null,
+  in_reply_to_user_id_str: null,
+  in_reply_to_screen_name: null,
+  user: {
+    id: 1355970439009472500,
+    id_str: '1355970439009472513',
+    name: 'Daglige Vaccine Updates',
+    screen_name: 'DagligeU',
+    location: '',
+    description: 'Følg for at få daglige vaccine updates 💉🇩🇰',
+    url: null,
+    entities: { description: [Object] },
+    protected: false,
+    followers_count: 20,
+    friends_count: 1,
+    listed_count: 0,
+    created_at: 'Sun Jan 31 20:05:28 +0000 2021',
+    favourites_count: 0,
+    utc_offset: null,
+    time_zone: null,
+    geo_enabled: false,
+    verified: false,
+    statuses_count: 79,
+    lang: null,
+    contributors_enabled: false,
+    is_translator: false,
+    is_translation_enabled: false,
+    profile_background_color: 'F5F8FA',
+    profile_background_image_url: null,
+    profile_background_image_url_https: null,
+    profile_background_tile: false,
+    profile_image_url: 'http://pbs.twimg.com/profile_images/1355972979478441985/jHrVWzRK_normal.jpg',
+    profile_image_url_https: 'https://pbs.twimg.com/profile_images/1355972979478441985/jHrVWzRK_normal.jpg',
+    profile_link_color: '1DA1F2',
+    profile_sidebar_border_color: 'C0DEED',
+    profile_sidebar_fill_color: 'DDEEF6',
+    profile_text_color: '333333',
+    profile_use_background_image: true,
+    has_extended_profile: true,
+    default_profile: true,
+    default_profile_image: false,
+    following: false,
+    follow_request_sent: false,
+    notifications: false,
+    translator_type: 'none'
+  },
+  geo: null,
+  coordinates: null,
+  place: null,
+  contributors: null,
+  is_quote_status: false,
+  retweet_count: 0,
+  favorite_count: 0,
+  favorited: false,
+  retweeted: false,
+  possibly_sensitive: false,
+  lang: 'da'
+}
+finisehd
+started 1
+Now using node v14.15.5 (npm v6.14.11)
+Agent pid 10410
+Identity added: /home/pi/.ssh/id_ed25519 (benjamin.dals.hughes@gmail.com)
+256 SHA256:GmIJ2eex65tvtHRp/iSr+W5BddOuf2wPX+Bwf47vYHw benjamin.dals.hughes@gmail.com (ED25519)
+
+> @2.0.0 data-deploy /home/pi/projects/hvor-langt-er-vi
+> git pull && npm run data && npm run deploy && git add . && git commit -m "added newest data" && git push origin master && node tweet-vaccination.js
+
+From github.com:benna100/hvor-langt-er-vi
+   71e9673..964aab8  master     -> origin/master
+   0db4ca0..a8c62d1  gh-pages   -> origin/gh-pages
+Checking out files:  11% (5/43)   Checking out files:  13% (6/43)   Checking out files:  16% (7/43)   Checking out files:  18% (8/43)   Checking out files:  20% (9/43)   Checking out files:  23% (10/43)   Checking out files:  25% (11/43)   Checking out files:  27% (12/43)   Checking out files:  30% (13/43)   Checking out files:  32% (14/43)   Checking out files:  34% (15/43)   Checking out files:  37% (16/43)   Checking out files:  39% (17/43)   Checking out files:  41% (18/43)   Checking out files:  44% (19/43)   Checking out files:  46% (20/43)   Checking out files:  48% (21/43)   Checking out files:  51% (22/43)   Checking out files:  53% (23/43)   Checking out files:  55% (24/43)   Checking out files:  58% (25/43)   Checking out files:  60% (26/43)   Checking out files:  62% (27/43)   Checking out files:  65% (28/43)   Checking out files:  67% (29/43)   Checking out files:  69% (30/43)   Checking out files:  72% (31/43)   Checking out files:  74% (32/43)   Checking out files:  76% (33/43)   Checking out files:  79% (34/43)   Checking out files:  81% (35/43)   Checking out files:  83% (36/43)   Checking out files:  86% (37/43)   Checking out files:  88% (38/43)   Checking out files:  90% (39/43)   Checking out files:  93% (40/43)   Checking out files:  95% (41/43)   Checking out files:  97% (42/43)   Checking out files: 100% (43/43)   Checking out files: 100% (43/43), done.
+Updating 71e9673..964aab8
+Fast-forward
+ covid-19-vaccinationsdata-22032021-fr40.zip | Bin 93608 -> 0 bytes
+ covid19-vaccinationsdata-01042021-so2l.zip  | Bin 105609 -> 0 bytes
+ covid19-vaccinationsdata-02042021-jes0.zip  | Bin 106820 -> 0 bytes
+ covid19-vaccinationsdata-03042021-lih5.zip  | Bin 107995 -> 0 bytes
+ covid19-vaccinationsdata-04042021-pdm6.zip  | Bin 109136 -> 0 bytes
+ covid19-vaccinationsdata-05042021-hkd1.zip  | Bin 110142 -> 0 bytes
+ covid19-vaccinationsdata-06042021-fghj.zip  | Bin 111078 -> 0 bytes
+ covid19-vaccinationsdata-07042021-88yt.zip  | Bin 112550 -> 0 bytes
+ covid19-vaccinationsdata-08032021-p9o8.zip  | Bin 77232 -> 0 bytes
+ covid19-vaccinationsdata-08042021-uu33.zip  | Bin 113828 -> 0 bytes
+ covid19-vaccinationsdata-09032021-3fod.zip  | Bin 78325 -> 0 bytes
+ covid19-vaccinationsdata-09042021-d4n4.zip  | Bin 115105 -> 0 bytes
+ covid19-vaccinationsdata-10042021-2sko.zip  | Bin 116370 -> 0 bytes
+ covid19-vaccinationsdata-11032021-4a2s.zip  | Bin 81151 -> 0 bytes
+ covid19-vaccinationsdata-11042021-7sne.zip  | Bin 117553 -> 0 bytes
+ covid19-vaccinationsdata-12032021-uh7y.zip  | Bin 82294 -> 0 bytes
+ covid19-vaccinationsdata-12042021-uu32.zip  | Bin 118565 -> 0 bytes
+ covid19-vaccinationsdata-13032021-4r5t.zip  | Bin 84023 -> 0 bytes
+ covid19-vaccinationsdata-13042021-2tal.zip  | Bin 120320 -> 0 bytes
+ covid19-vaccinationsdata-14032021-b2v4.zip  | Bin 84475 -> 0 bytes
+ covid19-vaccinationsdata-14042021-23uu.zip  | Bin 121328 -> 0 bytes
+ covid19-vaccinationsdata-15032021-a7x2.zip  | Bin 85398 -> 0 bytes
+ covid19-vaccinationsdata-15042021-1hi7.zip  | Bin 122719 -> 0 bytes
+ covid19-vaccinationsdata-16032021-2mat.zip  | Bin 86833 -> 0 bytes
+ covid19-vaccinationsdata-16042021-23yt.zip  | Bin 123945 -> 0 bytes
+ covid19-vaccinationsdata-17032021-z2k1.zip  | Bin 88144 -> 0 bytes
+ covid19-vaccinationsdata-17042021-oiu4.zip  | Bin 125249 -> 0 bytes
+ covid19-vaccinationsdata-18032021-u2z8.zip  | Bin 89418 -> 0 bytes
+ covid19-vaccinationsdata-18042021-hm63.zip  | Bin 126161 -> 0 bytes
+ covid19-vaccinationsdata-19032021-j3k4.zip  | Bin 90723 -> 0 bytes
+ covid19-vaccinationsdata-20032021-i33i.zip  | Bin 91887 -> 0 bytes
+ covid19-vaccinationsdata-21032021-u995.zip  | Bin 92557 -> 0 bytes
+ covid19-vaccinationsdata-23032021-nm89.zip  | Bin 94793 -> 0 bytes
+ covid19-vaccinationsdata-24032021-6z9a.zip  | Bin 96030 -> 0 bytes
+ covid19-vaccinationsdata-25032021-1l7t.zip  | Bin 97427 -> 0 bytes
+ covid19-vaccinationsdata-26032021-hjun.zip  | Bin 98606 -> 0 bytes
+ covid19-vaccinationsdata-27032021-m4m7.zip  | Bin 99762 -> 0 bytes
+ covid19-vaccinationsdata-28032021-pas3.zip  | Bin 100603 -> 0 bytes
+ covid19-vaccinationsdata-29032021-lb1f.zip  | Bin 101637 -> 0 bytes
+ covid19-vaccinationsdata-30032021-d09h.zip  | Bin 102932 -> 0 bytes
+ covid19-vaccinationsdata-31032021-g3d3.zip  | Bin 104273 -> 0 bytes
+ src/data/vaccination.json                   |   2 +-
+ src/get-newest-vaccination-data-new.js      |   9 ++++++---
+ 43 files changed, 7 insertions(+), 4 deletions(-)
+ delete mode 100644 covid-19-vaccinationsdata-22032021-fr40.zip
+ delete mode 100644 covid19-vaccinationsdata-01042021-so2l.zip
+ delete mode 100644 covid19-vaccinationsdata-02042021-jes0.zip
+ delete mode 100644 covid19-vaccinationsdata-03042021-lih5.zip
+ delete mode 100644 covid19-vaccinationsdata-04042021-pdm6.zip
+ delete mode 100644 covid19-vaccinationsdata-05042021-hkd1.zip
+ delete mode 100644 covid19-vaccinationsdata-06042021-fghj.zip
+ delete mode 100644 covid19-vaccinationsdata-07042021-88yt.zip
+ delete mode 100644 covid19-vaccinationsdata-08032021-p9o8.zip
+ delete mode 100644 covid19-vaccinationsdata-08042021-uu33.zip
+ delete mode 100644 covid19-vaccinationsdata-09032021-3fod.zip
+ delete mode 100644 covid19-vaccinationsdata-09042021-d4n4.zip
+ delete mode 100644 covid19-vaccinationsdata-10042021-2sko.zip
+ delete mode 100644 covid19-vaccinationsdata-11032021-4a2s.zip
+ delete mode 100644 covid19-vaccinationsdata-11042021-7sne.zip
+ delete mode 100644 covid19-vaccinationsdata-12032021-uh7y.zip
+ delete mode 100644 covid19-vaccinationsdata-12042021-uu32.zip
+ delete mode 100644 covid19-vaccinationsdata-13032021-4r5t.zip
+ delete mode 100644 covid19-vaccinationsdata-13042021-2tal.zip
+ delete mode 100644 covid19-vaccinationsdata-14032021-b2v4.zip
+ delete mode 100644 covid19-vaccinationsdata-14042021-23uu.zip
+ delete mode 100644 covid19-vaccinationsdata-15032021-a7x2.zip
+ delete mode 100644 covid19-vaccinationsdata-15042021-1hi7.zip
+ delete mode 100644 covid19-vaccinationsdata-16032021-2mat.zip
+ delete mode 100644 covid19-vaccinationsdata-16042021-23yt.zip
+ delete mode 100644 covid19-vaccinationsdata-17032021-z2k1.zip
+ delete mode 100644 covid19-vaccinationsdata-17042021-oiu4.zip
+ delete mode 100644 covid19-vaccinationsdata-18032021-u2z8.zip
+ delete mode 100644 covid19-vaccinationsdata-18042021-hm63.zip
+ delete mode 100644 covid19-vaccinationsdata-19032021-j3k4.zip
+ delete mode 100644 covid19-vaccinationsdata-20032021-i33i.zip
+ delete mode 100644 covid19-vaccinationsdata-21032021-u995.zip
+ delete mode 100644 covid19-vaccinationsdata-23032021-nm89.zip
+ delete mode 100644 covid19-vaccinationsdata-24032021-6z9a.zip
+ delete mode 100644 covid19-vaccinationsdata-25032021-1l7t.zip
+ delete mode 100644 covid19-vaccinationsdata-26032021-hjun.zip
+ delete mode 100644 covid19-vaccinationsdata-27032021-m4m7.zip
+ delete mode 100644 covid19-vaccinationsdata-28032021-pas3.zip
+ delete mode 100644 covid19-vaccinationsdata-29032021-lb1f.zip
+ delete mode 100644 covid19-vaccinationsdata-30032021-d09h.zip
+ delete mode 100644 covid19-vaccinationsdata-31032021-g3d3.zip
+
+> @2.0.0 data /home/pi/projects/hvor-langt-er-vi
+> node src/get-newest-vaccination-data-new.js
+
+start --------------------------------------
+2021-04-21T13:00:29.834Z
+Current path: /home/pi/projects/hvor-langt-er-vi
+Current dirname: /home/pi/projects/hvor-langt-er-vi/src
+end -------------------------------------------------------------------------
+File Renamed.
+finish
+/home/pi/projects/hvor-langt-er-vi/src/data/vaccination/Vaccine_DB/Vaccinationsdaekning_nationalt.csv
+{
+  geografi: 'DK',
+  'Antal f�rste vacc.': '1119575',
+  'Antal faerdigvacc.': '536334',
+  'Antal borgere': '5844558',
+  'Vacc.d�kning faerdigvacc. (%)': '9.2',
+  'Vacc.d�kning p�begyndt vacc. (%)': '19.2'
+}
+20-04-2021 19.2 9.2 22139 17215
+CSV file successfully processed
+./src/vaccination is deleted!
+
+> @2.0.0 predeploy /home/pi/projects/hvor-langt-er-vi
+> npm run build
+
+
+> @2.0.0 build /home/pi/projects/hvor-langt-er-vi
+> webpack --config webpack.prod.js --mode production
+
+clean-webpack-plugin: /home/pi/projects/hvor-langt-er-vi/dist has been removed.
+(node:10494) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Hash: 78a011c3bb3b54c9bd30
+Version: webpack 4.46.0
+Time: 119064ms
+Built at: 21/04/2021 3:03:01 pm
+                              Asset      Size  Chunks                                Chunk Names
+                              CNAME  16 bytes          [emitted]                     
+                       english.html  7.16 KiB          [emitted]                     
+                        favicon.png  57.8 KiB          [emitted]                     
+                         index.html  7.18 KiB          [emitted]                     
+       main.78a011c3bb3b54c9bd30.js   488 KiB       0  [emitted] [immutable]  [big]  main
+   main.78a011c3bb3b54c9bd30.js.map  1.69 MiB       0  [emitted] [dev]               main
+    styles.0cca1ad490c224c2db71.css  5.11 KiB       0  [emitted]                     main
+styles.0cca1ad490c224c2db71.css.map  29.3 KiB          [emitted]                     
+Entrypoint main [big] = main.78a011c3bb3b54c9bd30.js styles.0cca1ad490c224c2db71.css main.78a011c3bb3b54c9bd30.js.map
+  [1] ./src/data/vaccination.json 12.8 KiB {0} [built]
+  [2] ./src/helper.js 5.67 KiB {0} [built]
+[138] ./src/index.js 7.46 KiB {0} [built]
+[139] ./src/chart.js 10.2 KiB {0} [built]
+[141] (webpack)/buildin/module.js 497 bytes {0} [built]
+[142] ./node_modules/moment/locale sync ^\.\/.*$ 3.21 KiB {0} [optional] [built]
+[143] ./src/main.scss 41 bytes [built]
+[144] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB [built]
+    + 140 hidden modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  main.78a011c3bb3b54c9bd30.js (488 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (493 KiB)
+      main.78a011c3bb3b54c9bd30.js
+      styles.0cca1ad490c224c2db71.css
+
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--5-2!node_modules/postcss-loader/lib/index.js??ref--5-3!node_modules/sass-loader/lib/loader.js??ref--5-4!src/main.scss:
+    Entrypoint undefined = extract-text-webpack-plugin-output-filename
+    [0] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB {0} [built]
+        + 1 hidden module
+Child html-webpack-plugin for "english.html":
+     1 asset
+    Entrypoint undefined = english.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./english.html 6.19 KiB {0} [built]
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./index.html 6.22 KiB {0} [built]
+
+> @2.0.0 deploy /home/pi/projects/hvor-langt-er-vi
+> gh-pages -d dist
+
+Published
