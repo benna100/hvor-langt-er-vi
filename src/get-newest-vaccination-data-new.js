@@ -35,7 +35,8 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                     .then(
                         () => {
                             console.log("finish");
-
+                            // windows fix replace "./src/data/vaccination" with ".\\src\\data\\vaccination"
+                            // and .replace(`/src`, ""); with .replace(`\\src`, "");
                             let nationalVaccinationFile = getAllFiles(
                                 "./src/data/vaccination"
                             )
