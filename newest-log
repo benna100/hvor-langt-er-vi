@@ -13519,3 +13519,186 @@ Child html-webpack-plugin for "index.html":
 > gh-pages -d dist
 
 Published
+[master a6dc38d] added newest data
+ 3 files changed, 184 insertions(+), 1 deletion(-)
+ create mode 100644 vaccinationsdata-dashboard-covid19-27052021-oa91.zip
+remote: 
+remote: GitHub found 15 vulnerabilities on benna100/hvor-langt-er-vi's default branch (1 critical, 7 high, 5 moderate, 2 low). To find out more, visit:        
+remote:      https://github.com/benna100/hvor-langt-er-vi/security/dependabot        
+remote: 
+To github.com:benna100/hvor-langt-er-vi.git
+   3a7ec49..a6dc38d  master -> master
+{
+  created_at: 'Thu May 27 14:03:13 +0000 2021',
+  id: 1397916303780839400,
+  id_str: '1397916303780839434',
+  text: 'Vi har idag færdigvaccineret 12.430. I alt er vi oppe på 1.217.971 (20,80%)\n' +
+    '\n' +
+    'Vi har påbegyndt vaccination for 47.68… https://t.co/VfzjUQy4In',
+  truncated: true,
+  entities: { hashtags: [], symbols: [], user_mentions: [], urls: [ [Object] ] },
+  source: '<a href="https://help.twitter.com/en/using-twitter/how-to-tweet#source-labels" rel="nofollow">Daglige Vaccine Updates</a>',
+  in_reply_to_status_id: null,
+  in_reply_to_status_id_str: null,
+  in_reply_to_user_id: null,
+  in_reply_to_user_id_str: null,
+  in_reply_to_screen_name: null,
+  user: {
+    id: 1355970439009472500,
+    id_str: '1355970439009472513',
+    name: 'Daglige Vaccine Updates',
+    screen_name: 'DagligeU',
+    location: '',
+    description: 'Følg for at få daglige vaccine updates 💉🇩🇰',
+    url: null,
+    entities: { description: [Object] },
+    protected: false,
+    followers_count: 20,
+    friends_count: 1,
+    listed_count: 0,
+    created_at: 'Sun Jan 31 20:05:28 +0000 2021',
+    favourites_count: 0,
+    utc_offset: null,
+    time_zone: null,
+    geo_enabled: false,
+    verified: false,
+    statuses_count: 116,
+    lang: null,
+    contributors_enabled: false,
+    is_translator: false,
+    is_translation_enabled: false,
+    profile_background_color: 'F5F8FA',
+    profile_background_image_url: null,
+    profile_background_image_url_https: null,
+    profile_background_tile: false,
+    profile_image_url: 'http://pbs.twimg.com/profile_images/1355972979478441985/jHrVWzRK_normal.jpg',
+    profile_image_url_https: 'https://pbs.twimg.com/profile_images/1355972979478441985/jHrVWzRK_normal.jpg',
+    profile_link_color: '1DA1F2',
+    profile_sidebar_border_color: 'C0DEED',
+    profile_sidebar_fill_color: 'DDEEF6',
+    profile_text_color: '333333',
+    profile_use_background_image: true,
+    has_extended_profile: true,
+    default_profile: true,
+    default_profile_image: false,
+    following: false,
+    follow_request_sent: false,
+    notifications: false,
+    translator_type: 'none',
+    withheld_in_countries: []
+  },
+  geo: null,
+  coordinates: null,
+  place: null,
+  contributors: null,
+  is_quote_status: false,
+  retweet_count: 0,
+  favorite_count: 0,
+  favorited: false,
+  retweeted: false,
+  possibly_sensitive: false,
+  lang: 'da'
+}
+finisehd
+started 1
+Now using node v14.15.5 (npm v6.14.11)
+Agent pid 21359
+Identity added: /home/pi/.ssh/id_ed25519 (benjamin.dals.hughes@gmail.com)
+256 SHA256:GmIJ2eex65tvtHRp/iSr+W5BddOuf2wPX+Bwf47vYHw benjamin.dals.hughes@gmail.com (ED25519)
+
+> @2.0.0 data-deploy /home/pi/projects/hvor-langt-er-vi
+> git pull && npm run data && npm run deploy && git add . && git commit -m "added newest data" && git push origin master && node tweet-vaccination.js
+
+From github.com:benna100/hvor-langt-er-vi
+   00e4381..096bbd0  gh-pages   -> origin/gh-pages
+Already up to date.
+
+> @2.0.0 data /home/pi/projects/hvor-langt-er-vi
+> node src/get-newest-vaccination-data-new.js
+
+start --------------------------------------
+2021-05-28T14:00:25.735Z
+Current path: /home/pi/projects/hvor-langt-er-vi
+Current dirname: /home/pi/projects/hvor-langt-er-vi/src
+end -------------------------------------------------------------------------
+File Renamed.
+finish
+/home/pi/projects/hvor-langt-er-vi/src/data/vaccination/Vaccine_DB/Vaccinationsdaekning_nationalt.csv
+{
+  geografi: 'DK',
+  'Antal f�rste vacc.': '2033923',
+  'Antal faerdigvacc.': '1230320',
+  'Antal borgere': '5846725',
+  'Vacc.d�kning faerdigvacc. (%)': '21.0',
+  'Vacc.d�kning p�begyndt vacc. (%)': '34.8'
+}
+27-05-2021 34.8 21 49281 12349
+CSV file successfully processed
+./src/vaccination is deleted!
+
+> @2.0.0 predeploy /home/pi/projects/hvor-langt-er-vi
+> npm run build
+
+
+> @2.0.0 build /home/pi/projects/hvor-langt-er-vi
+> webpack --config webpack.prod.js --mode production
+
+clean-webpack-plugin: /home/pi/projects/hvor-langt-er-vi/dist has been removed.
+(node:21441) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Hash: 0fdcceb31e9c9fd49698
+Version: webpack 4.46.0
+Time: 122236ms
+Built at: 28/05/2021 4:02:54 pm
+                              Asset      Size  Chunks                                Chunk Names
+                              CNAME  16 bytes          [emitted]                     
+                       english.html  7.16 KiB          [emitted]                     
+                        favicon.png  57.8 KiB          [emitted]                     
+                         index.html  7.18 KiB          [emitted]                     
+       main.0fdcceb31e9c9fd49698.js   492 KiB       0  [emitted] [immutable]  [big]  main
+   main.0fdcceb31e9c9fd49698.js.map  1.69 MiB       0  [emitted] [dev]               main
+    styles.0cca1ad490c224c2db71.css  5.11 KiB       0  [emitted]                     main
+styles.0cca1ad490c224c2db71.css.map  29.3 KiB          [emitted]                     
+Entrypoint main [big] = main.0fdcceb31e9c9fd49698.js styles.0cca1ad490c224c2db71.css main.0fdcceb31e9c9fd49698.js.map
+  [1] ./src/data/vaccination.json 16.9 KiB {0} [built]
+  [2] ./src/helper.js 5.67 KiB {0} [built]
+[138] ./src/index.js 7.46 KiB {0} [built]
+[139] ./src/chart.js 10.2 KiB {0} [built]
+[141] (webpack)/buildin/module.js 497 bytes {0} [built]
+[142] ./node_modules/moment/locale sync ^\.\/.*$ 3.21 KiB {0} [optional] [built]
+[143] ./src/main.scss 41 bytes [built]
+[144] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB [built]
+    + 140 hidden modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  main.0fdcceb31e9c9fd49698.js (492 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (497 KiB)
+      main.0fdcceb31e9c9fd49698.js
+      styles.0cca1ad490c224c2db71.css
+
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--5-2!node_modules/postcss-loader/lib/index.js??ref--5-3!node_modules/sass-loader/lib/loader.js??ref--5-4!src/main.scss:
+    Entrypoint undefined = extract-text-webpack-plugin-output-filename
+    [0] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB {0} [built]
+        + 1 hidden module
+Child html-webpack-plugin for "english.html":
+     1 asset
+    Entrypoint undefined = english.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./english.html 6.19 KiB {0} [built]
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./index.html 6.23 KiB {0} [built]
+
+> @2.0.0 deploy /home/pi/projects/hvor-langt-er-vi
+> gh-pages -d dist
+
+Published
