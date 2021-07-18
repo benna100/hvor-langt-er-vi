@@ -22582,3 +22582,137 @@ Child html-webpack-plugin for "index.html":
 > gh-pages -d dist
 
 Published
+[master 751d4ce] added newest data
+ 3 files changed, 130 insertions(+), 1 deletion(-)
+ create mode 100644 vaccinationsdata-dashboard-covid19-17072021-wtmr.zip
+remote: 
+remote: GitHub found 20 vulnerabilities on benna100/hvor-langt-er-vi's default branch (1 critical, 11 high, 6 moderate, 2 low). To find out more, visit:        
+remote:      https://github.com/benna100/hvor-langt-er-vi/security/dependabot        
+remote: 
+To github.com:benna100/hvor-langt-er-vi.git
+   58dbf22..751d4ce  master -> master
+/home/pi/projects/hvor-langt-er-vi/tweet-vaccination.js:41
+].perDay.toLocaleString(language);
+         ^
+
+TypeError: Cannot read property 'toLocaleString' of null
+    at Object.<anonymous> (/home/pi/projects/hvor-langt-er-vi/tweet-vaccination.js:41:10)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @2.0.0 data-deploy: `git pull && npm run data && npm run deploy && git add . && git commit -m "added newest data" && git push origin master && node tweet-vaccination.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @2.0.0 data-deploy script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/pi/.npm/_logs/2021-07-17T14_02_57_880Z-debug.log
+finisehd
+started 1
+Now using node v14.15.5 (npm v6.14.11)
+Agent pid 26019
+Identity added: /home/pi/.ssh/id_ed25519 (benjamin.dals.hughes@gmail.com)
+256 SHA256:GmIJ2eex65tvtHRp/iSr+W5BddOuf2wPX+Bwf47vYHw benjamin.dals.hughes@gmail.com (ED25519)
+
+> @2.0.0 data-deploy /home/pi/projects/hvor-langt-er-vi
+> git pull && npm run data && npm run deploy && git add . && git commit -m "added newest data" && git push origin master && node tweet-vaccination.js
+
+From github.com:benna100/hvor-langt-er-vi
+   751d4ce..8a535f7  master     -> origin/master
+   8389577..f671dbe  gh-pages   -> origin/gh-pages
+Updating 751d4ce..8a535f7
+Fast-forward
+ english.html | 2 +-
+ index.html   | 3 ++-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+> @2.0.0 data /home/pi/projects/hvor-langt-er-vi
+> node src/get-newest-vaccination-data-new.js
+
+start --------------------------------------
+2021-07-18T14:00:24.800Z
+Current path: /home/pi/projects/hvor-langt-er-vi
+Current dirname: /home/pi/projects/hvor-langt-er-vi/src
+end -------------------------------------------------------------------------
+File Renamed.
+finish
+/home/pi/projects/hvor-langt-er-vi/src/data/vaccination/Vaccine_DB/Vaccinationsdaekning_nationalt.csv
+{
+  'geografi";"Antal f�rste vacc.";"Antal faerdigvacc.";"Antal borgere";"Vacc.d�kning faerdigvacc. (%)";"Vacc.d�kning p�begyndt vacc. (%)': 'DK;3902740;2621098;5851774;44.8;66.7'
+}
+17-07-2021 NaN NaN NaN NaN
+CSV file successfully processed
+./src/vaccination is deleted!
+
+> @2.0.0 predeploy /home/pi/projects/hvor-langt-er-vi
+> npm run build
+
+
+> @2.0.0 build /home/pi/projects/hvor-langt-er-vi
+> webpack --config webpack.prod.js --mode production
+
+clean-webpack-plugin: /home/pi/projects/hvor-langt-er-vi/dist has been removed.
+(node:26091) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Hash: 9bbb66cefe59247fae7b
+Version: webpack 4.46.0
+Time: 112410ms
+Built at: 18/07/2021 4:02:48 pm
+                              Asset      Size  Chunks                                Chunk Names
+                              CNAME  16 bytes          [emitted]                     
+                       english.html  7.29 KiB          [emitted]                     
+                        favicon.png  57.8 KiB          [emitted]                     
+                         index.html  7.31 KiB          [emitted]                     
+       main.9bbb66cefe59247fae7b.js   497 KiB       0  [emitted] [immutable]  [big]  main
+   main.9bbb66cefe59247fae7b.js.map  1.69 MiB       0  [emitted] [dev]               main
+    styles.0cca1ad490c224c2db71.css  5.11 KiB       0  [emitted]                     main
+styles.0cca1ad490c224c2db71.css.map  29.3 KiB          [emitted]                     
+Entrypoint main [big] = main.9bbb66cefe59247fae7b.js styles.0cca1ad490c224c2db71.css main.9bbb66cefe59247fae7b.js.map
+  [1] ./src/data/vaccination.json 22.6 KiB {0} [built]
+  [2] ./src/helper.js 5.67 KiB {0} [built]
+[138] ./src/index.js 7.46 KiB {0} [built]
+[139] ./src/chart.js 10.2 KiB {0} [built]
+[141] (webpack)/buildin/module.js 497 bytes {0} [built]
+[142] ./node_modules/moment/locale sync ^\.\/.*$ 3.21 KiB {0} [optional] [built]
+[143] ./src/main.scss 41 bytes [built]
+[144] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB [built]
+    + 140 hidden modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  main.9bbb66cefe59247fae7b.js (497 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (503 KiB)
+      main.9bbb66cefe59247fae7b.js
+      styles.0cca1ad490c224c2db71.css
+
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--5-2!node_modules/postcss-loader/lib/index.js??ref--5-3!node_modules/sass-loader/lib/loader.js??ref--5-4!src/main.scss:
+    Entrypoint undefined = extract-text-webpack-plugin-output-filename
+    [0] ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/main.scss 30.5 KiB {0} [built]
+        + 1 hidden module
+Child html-webpack-plugin for "english.html":
+     1 asset
+    Entrypoint undefined = english.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./english.html 6.33 KiB {0} [built]
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [0] ./node_modules/html-webpack-plugin/lib/loader.js!./index.html 6.36 KiB {0} [built]
+
+> @2.0.0 deploy /home/pi/projects/hvor-langt-er-vi
+> gh-pages -d dist
+
+Published
