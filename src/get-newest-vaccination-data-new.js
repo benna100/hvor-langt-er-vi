@@ -52,6 +52,13 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                             fs.createReadStream(nationalVaccinationFile)
                                 .pipe(csv())
                                 .on("data", (row) => {
+                                    Object.values =
+                                        Object.values ||
+                                        ((obj) =>
+                                            Object.keys(obj).map(
+                                                (key) => obj[key]
+                                            ));
+
                                     console.log(row);
                                     var vaccinationDataUnformatted = fs.readFileSync(
                                         "src/data/vaccination.json"
@@ -93,18 +100,30 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                                         dateDay = `0${dateDay}`;
                                     }
                                     const date = `${dateDay}-${dateMonth}-${yesterdaysDate.getFullYear()}`;
+                                    const valuesRow =
+                                        Object.values(row)[0].split(";");
+                                    // const percentageTotal = parseFloat(
+                                    //     row["Vacc.d�kning p�begyndt vacc. (%)"]
+                                    // );
+                                    // const percentageTotalCompleted = parseFloat(
+                                    //     row["Vacc.d�kning faerdigvacc. (%)"]
+                                    // );
+                                    // const vaccinatedTotalToday = parseInt(
+                                    //     row["Antal f�rste vacc."]
+                                    // );
+                                    // const vaccinatedTotalCompletedToday =
+                                    //     parseInt(row["Antal faerdigvacc."]);
                                     const percentageTotal = parseFloat(
-                                        row["Vacc.d�kning p�begyndt vacc. (%)"]
+                                        valuesRow[5]
                                     );
                                     const percentageTotalCompleted = parseFloat(
-                                        row["Vacc.d�kning faerdigvacc. (%)"]
+                                        valuesRow[4]
                                     );
                                     const vaccinatedTotalToday = parseInt(
-                                        row["Antal f�rste vacc."]
+                                        valuesRow[1]
                                     );
-                                    const vaccinatedTotalCompletedToday = parseInt(
-                                        row["Antal faerdigvacc."]
-                                    );
+                                    const vaccinatedTotalCompletedToday =
+                                        parseInt(valuesRow[2]);
                                     const perDay =
                                         vaccinatedTotalToday -
                                         yesterdaysTotalPerDay;
@@ -125,10 +144,10 @@ got("https://covid19.ssi.dk/overvagningsdata/download-fil-med-vaccinationsdata")
                                         perDayCompleted,
                                         percentageTotalCompleted,
                                     });
-                                    exportJson(
-                                        vaccinationData,
-                                        "src/data/vaccination.json"
-                                    );
+                                    // exportJson(
+                                    //     vaccinationData,
+                                    //     "src/data/vaccination.json"
+                                    // );
                                 })
                                 .on("end", () => {
                                     console.log(
