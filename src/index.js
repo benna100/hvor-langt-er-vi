@@ -74,6 +74,7 @@ function getDateWhenEveryoneIsVaccinated(vaccinationData) {
     const vaccinatedPerDay = totalVaccinated / numberOfDaysForAverage;
 
     // https://sundhedsdatastyrelsen.dk/da/nyheder/2019/foedsler_28052019
+    // Pregnant people gets vaccinated now aswell
     const numberOfPregnantPeople = 61273;
     // https://www.dst.dk/da/Statistik/emner/befolkning-og-valg/husstande-familier-boern/boern
     const numberOfYoungPeople = 1168222;
@@ -81,7 +82,6 @@ function getDateWhenEveryoneIsVaccinated(vaccinationData) {
     const missingPeopleToVaccinate =
         totalDanes -
         totalNumberOfVaccinated -
-        numberOfPregnantPeople -
         numberOfYoungPeople;
 
     const numberOfDaysToVaccinateRest =
