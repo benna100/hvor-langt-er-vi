@@ -11,8 +11,8 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
         "data": "node src/get-newest-vaccination-data-new.js",
-        "data-deploy": "git pull && npm run data && npm run deploy && git add . && git commit -m \"added newest data\" && git push origin master && node tweet-vaccination.js",
-        "data-deploy-windows": "npm run data && npm run deploy && node tweet-vaccination.js"
+        "data-deploy": "git pull && npm run data && npm run deploy && git add . && git commit -m \"added newest data\" && git push origin master",
+        "data-deploy-windows": "npm run data && npm run deploy"
     },
     "repository": {
         "type": "git",
